@@ -1,1 +1,1 @@
-Web per penjar els apunts.
+Web to upload math and physics summaries.
