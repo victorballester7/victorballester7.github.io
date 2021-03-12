@@ -1,1 +1,1 @@
-Web to upload math and physics summaries.
+Website to upload math and physics summaries.
