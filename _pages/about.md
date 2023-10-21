@@ -29,7 +29,7 @@ When I'm not immersed in my academic pursuits, you'll often find me indulging in
 
 Looking ahead, I'm driven to pursue a Ph.D. in a field closely related to aerodynamics. My ultimate dream is to become a mathematical engineer in the thrilling world of car racing, where I can apply my expertise to enhance performance and efficiency.
 
-If you'd like to get in touch, feel free to reach out to me via [email](mailto:{{ site.email | encode_email }}) or send me a message on [Telegram](https://telegram.me/{{ site.telegram_username }}). I'm always eager to connect with fellow enthusiasts and explore exciting collaborative opportunities.
+If you'd like to get in touch, feel free to reach out to me via [email](mailto:{{ site.email | encode_email }}) or send me a message on [WhatsApp](https://wa.me/{{ site.whatsapp_number }}), [Telegram](https://telegram.me/{{ site.telegram_username }}) or [LinkedIn](https://www.linkedin.com/in/{{ site.linkedin_username }}). I'm always eager to connect with fellow enthusiasts and explore exciting collaborative opportunities.
 
 <!-- Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
