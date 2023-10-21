@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: M2 student in Applied and Theoretical Mathematics at Dauphine-PSL University
 

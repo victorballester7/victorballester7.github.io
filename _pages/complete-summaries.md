@@ -11,12 +11,31 @@ toc:
 
 ## Mathematics
 
-{% if site.data.complete-summaries.mathematics %}
-{% assign sorted = site.data.complete-summaries.mathematics | sort: 'order' %}
-{% for subject in sorted %}
-<a href="https://github.com/victorballester7/complete-summaries/releases/latest/download/{{ subject.file }}" class="btn btn--primary">{{ subject.name }}</a>
-{% endfor %}
-{% else %}
+{% if site.data.complete_summaries.mathematics %}
 
-<p>There are no notes yet.</p>
+<p>Full summaries of <a href="https://github.com/victorballester7/Complete-summaries/releases/latest/download/main_math.pdf" target="_top">Mathematics</a>.</p>
+{% for year in site.data.complete_summaries.mathematics %}
+<h4>{{ year.name }}</h4>
+<ul>
+{% for subject in year.subjects %}
+{% assign filename = subject | replace: ' ', '_' %}
+  <li><a href="https://github.com/victorballester7/complete-summaries/releases/latest/download/{{ filename }}.pdf">{{ subject }}</a></li>
+{% endfor %}
+</ul>
+{% endfor %}
+{% endif %}
+
+## Physics
+
+{% if site.data.complete_summaries.physics %}
+{% for year in site.data.complete_summaries.physics %}
+
+<h4>{{ year.name }}</h4>
+<ul>
+{% for subject in year.subjects %}
+{% assign filename = subject | replace: ' ', '_' %}
+  <li><a href="https://github.com/victorballester7/complete-summaries/releases/latest/download/{{ filename }}.pdf"> {{ subject }}</a></li>
+{% endfor %}
+</ul>
+{% endfor %}
 {% endif %}

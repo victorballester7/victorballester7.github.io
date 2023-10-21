@@ -1,0 +1,60 @@
+mathematics:
+  - year_1:
+    name: 1st year
+    subjects:
+      - Fundamentals of mathematics
+      - Linear algebra
+      - Real-valued functions
+  - year_2:
+    name: 2nd year
+    subjects:
+      - Algebraic structures
+      - Discrete mathematics
+      - Functions of several variables
+      - Linear geometry
+      - Mathematical analysis
+      - Numerical methods
+  - year_3:
+    name: 3rd year
+    subjects:
+      - Complex analysis
+      - Differential equations
+      - Differential geometry
+      - Galois theory
+      - Probability
+      - Statistics
+      - Topology
+  - year_4:
+    name: 4th year
+    subjects:
+      - Algebraic topology
+      - Dynamical systems
+      - Harmonic analysis
+      - Linear models
+      - Numerical calculus
+      - Numerical integration of partial differential equations
+      - Partial differential equations
+      - Real and functional analysis
+      - Stochastic processes
+  - year_5:
+    name: 5th year
+    subjects:
+      - Advanced dynamic systems
+      - Advanced probability
+      - Advanced topics in functional analysis and PDEs
+      - Continuous optimization
+      - Introduction to nonlinear elliptic PDEs
+      - Montecarlo methods
+      - Numerical methods for PDEs
+      - Stochastic calculus
+physics:
+  - basic:
+    name: Basic level
+    subjects:
+      - Electricity and magnetism
+      - Mechanics and special relativity
+      - Structure of matter and thermodynamics
+  - advanced:
+    name: Advanced level
+    subjects:
+      - Fluid mechanics

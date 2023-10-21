@@ -1,9 +1,9 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
+title: Repositories
 description: Here you can find a list of my GitHub repositories that I am most proud of.
-nav: true
+nav: false
 nav_order: 3
 ---
 
