@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /complete-summarie/
+permalink: /complete-summaries/
 title: Notes in Mathematics
 nav: true
 nav_order: 4
