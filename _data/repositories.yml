@@ -1,12 +1,9 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - victorballester7
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - victorballester7/complete-summaries
+  - victorballester7/final-bachelor-thesis
+  - victorballester7/n-body-problem
+  - victorballester7/connect4
+  - victorballester7/dissonance
