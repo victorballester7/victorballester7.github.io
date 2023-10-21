@@ -51,7 +51,7 @@ areas:
           - Numerical methods for PDEs
           - Stochastic calculus
   - physics:
-    name: Physics
+    name: Topics in physics
     years:
       - basic:
         name: Basic level
