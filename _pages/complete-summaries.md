@@ -20,7 +20,7 @@ toc:
 
 <h2>{{ area.name }}</h2>
 {% if area.name == "Mathematics" %}
-<p>Full summaries of <a href="https://github.com/victorballester7/Complete-summaries/releases/latest/download/main_math.pdf" target="_top">Mathematics</a>.</p>
+<p>Full summaries of <a href="https://github.com/victorballester7/complete-summaries/releases/latest/download/main_math.pdf" target="_top">Mathematics</a>.</p>
 {% endif %}
 {% for year in area.years %}
 <h4>{{ year.name }}</h4>
