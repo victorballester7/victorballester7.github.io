@@ -1,9 +1,9 @@
-name: ReleasePDFfile
+name: copyHtml
 
 on:
   push:
     branches:
-      - gh-pages
+      - master
 
 jobs:
   build_pdf:
@@ -17,9 +17,11 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-files: complete-summaries/index.html complete-summaries/assets/
+          source-files: _site/complete-summaries/index.html _site/complete-summaries/assets/
           destination-username: victorballester7
           destination-repository: complete-summaries
           destination-directory:
+          destination-branch: main
+          from-container: false
           commit-email: victor.ballester.ribo@gmail.com
-          commit-message: "Update html file"
+          commit-message: "Update html and assets folder file"
