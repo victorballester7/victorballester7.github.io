@@ -17,7 +17,8 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-files: _site/complete-summaries/index.html _site/complete-summaries/assets/
+          # I want to copy file complete-summaries/index.html in th branch gh-pages of the repository victorballester7/victorballester7.github.io to the branch main of the repository victorballester7/complete-summaries
+          source-files: complete-summaries/index.html assets
           destination-username: victorballester7
           destination-repository: complete-summaries
           destination-directory:
