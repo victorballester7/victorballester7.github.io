@@ -19,7 +19,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hey there! I'm Víctor, a graduate student studying Mathematics at [Autonomous University of Barcelona](https://www.uab.cat/). I grew up in Badalona, a cozy town near Barcelona, and later moved to Paris, where I'm currently pursuing my master's degree in Applied and Theoretical Mathematics at [Dauphine-PSL University](https://dauphine.psl.eu/). At present, I'm a Fellow of the [Fondation Sciences Mathématiques de Paris](https://sciencesmaths-paris.fr/en/), supported by the PGSM scholarship.
+Hey there! I'm Víctor, a graduate student in Mathematics at [Autonomous University of Barcelona](https://www.uab.cat/). I grew up in Badalona, a cozy town near Barcelona, and recently moved to Paris, where I'm currently pursuing my master's degree in Applied and Theoretical Mathematics at [Dauphine-PSL University](https://dauphine.psl.eu/). At present, I'm a Fellow of the [Fondation Sciences Mathématiques de Paris](https://sciencesmaths-paris.fr/en/), supported by the PGSM scholarship.
 
 I've always had a deep love for both Mathematics and Physics. Besides my regular coursework, I've taken the initiative to self-study a significant portion of the physics curriculum. It's been an exciting journey, expanding my knowledge beyond the boundaries of my primary field.
 
