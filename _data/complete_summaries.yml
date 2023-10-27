@@ -50,6 +50,7 @@ areas:
           - Montecarlo methods
           - Numerical methods for PDEs
           - Stochastic calculus
+          - Stochastic control
   - physics:
     name: Topics in physics
     years:
