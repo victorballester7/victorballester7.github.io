@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Projects
-permalink: /projects/
+# uncomment the permalink line below to enable the page
+# permalink: /projects/
 description: A growing collection of your cool projects.
 nav: false
 nav_order: 2

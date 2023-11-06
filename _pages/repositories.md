@@ -1,6 +1,7 @@
 ---
 layout: page
-permalink: /repositories/
+# uncomment the permalink line below to enable the page
+# permalink: /repositories/
 title: Repositories
 description: Here you can find a list of my GitHub repositories that I am most proud of.
 nav: false

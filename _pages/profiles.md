@@ -1,6 +1,7 @@
 ---
 layout: profiles
-permalink: /people/
+# uncomment the permalink line below to enable the page
+# permalink: /people/
 title: people
 description: members of the lab or group
 nav: false # true/false to enable/disable navigation menu in this page

@@ -1,6 +1,7 @@
 ---
 layout: page
-permalink: /teaching/
+# uncomment the permalink line below to enable the page
+# permalink: /teaching/
 title: teaching
 description: Materials for courses you taught. Replace this text with your description.
 nav: false # true/false to enable/disable navigation menu in this page
