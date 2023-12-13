@@ -16,7 +16,7 @@ This project aims to solve the n-body problem numerically. The n-body problem is
     </div>
 </div>
 <div class="caption">
-    Periodic solution of the 3-body problem. The three bodies follow a figure-8 trajectory.
+    Classical periodic solution of the 3-body problem. The three bodies follow a figure-8 trajectory.
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
