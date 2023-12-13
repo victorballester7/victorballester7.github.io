@@ -42,7 +42,7 @@ areas:
       - year_5:
         name: 5th year
         subjects:
-          - Advanced dynamic systems
+          - Advanced dynamical systems
           - Advanced probability
           - Advanced topics in functional analysis and PDEs
           - Continuous optimization
