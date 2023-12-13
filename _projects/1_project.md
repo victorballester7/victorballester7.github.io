@@ -6,6 +6,16 @@ img: assets/img/n-body/title.png
 importance: 1
 category: fun
 # related_publications: einstein1956investigations, einstein1950meaning
+
+# Add this at the end when you have a video
+# <div class="row">
+#     <div class="col-sm mt-3 mt-md-0">
+#         {% include figure.html path="assets/video/n-body/10_3d.gif" title="10 3d" class="img-fluid rounded z-depth-1" %}
+#     </div>
+# </div>
+# <div class="caption">
+#     10 bodies with random initial conditions in 3D.
+# </div>
 ---
 
 This project aims to solve the n-body problem numerically. The n-body problem is the problem of predicting the motion of a group of celestial objects that interact with each other gravitationally. I give below some examples of the results obtained with this code.
@@ -34,11 +44,3 @@ This project aims to solve the n-body problem numerically. The n-body problem is
 <div class="caption">
     A simulation of the solar system with only the rocky planets during the period of 1.5 years.
 </div>
-<!-- <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/video/n-body/10_3d.gif" title="10 3d" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    10 bodies with random initial conditions in 3D.
-</div> -->
