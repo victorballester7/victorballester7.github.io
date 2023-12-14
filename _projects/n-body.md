@@ -7,10 +7,10 @@ importance: 1
 category: fun
 # related_publications: einstein1956investigations, einstein1950meaning
 
-# Add this at the end when you have a video
-# <div class="row">
+# add this at the end of the file (not does not work)
+# <div class="row mt-3">
 #     <div class="col-sm mt-3 mt-md-0">
-#         {% include figure.html path="assets/video/n-body/10_3d.gif" title="10 3d" class="img-fluid rounded z-depth-1" %}
+#         {% include video.html path="assets/video/n-body/10_3d.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
 #     </div>
 # </div>
 # <div class="caption">
