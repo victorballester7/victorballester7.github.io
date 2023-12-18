@@ -4,7 +4,7 @@ title: n-body problem
 description: Numerical simulation of the n-body problem
 img: assets/img/n-body/title.png
 importance: 1
-category: fun
+# category: fun
 # related_publications: einstein1956investigations, einstein1950meaning
 
 # add this at the end of the file (not does not work)

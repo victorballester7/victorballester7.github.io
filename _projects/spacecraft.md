@@ -5,7 +5,7 @@ description: Numerical propagation of trajectories of Earth-orbiting spacecraft
 img: assets/img/satellites/iss.jpg
 # redirect: https://unsplash.com
 importance: 3
-category: work
+# category: work
 ---
 
 This was my final bachelor's project at the Autonomous University of Barcelona. I worked on it under the supervision of <a href="http://www.gsd.uab.es/people?controller=member&view=member&id=9&slug=josep-maria">Prof. J. M. Mondelo</a>.

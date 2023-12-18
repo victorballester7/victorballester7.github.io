@@ -4,8 +4,8 @@ title: Connect 4
 description: An AI that plays Connect 4 implemented in C
 img: assets/img/connect4/connect4.png
 importance: 2
-category: work
-giscus_comments: true
+# category: work
+# giscus_comments: false
 ---
 
 This is a Connect 4 game implemented in C. It uses a <a href="https://en.wikipedia.org/wiki/Minimax">minimax</a> algorithm with <a href="https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning">alpha-beta pruning</a> to play against the user.
