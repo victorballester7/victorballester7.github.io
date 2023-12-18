@@ -1,6 +1,6 @@
 ---
 layout: page
-title: n-body problem
+title: n-body Problem
 description: Numerical simulation of the n-body problem
 img: assets/img/n-body/title.png
 importance: 1
