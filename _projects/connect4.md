@@ -4,7 +4,7 @@ title: Connect 4
 description: An AI that plays Connect 4 implemented in C
 img: assets/img/connect4/connect4.png
 importance: 2
-# category: work
+category: work
 # giscus_comments: false
 ---
 
