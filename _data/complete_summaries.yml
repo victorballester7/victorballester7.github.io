@@ -45,12 +45,10 @@ areas:
           - Advanced dynamical systems
           - Advanced probability
           - Advanced topics in functional analysis and PDEs
-          - Continuous optimization
           - Introduction to nonlinear elliptic PDEs
           - Montecarlo methods
           - Numerical methods for PDEs
           - Stochastic calculus
-          - Stochastic control
   - physics:
     name: Topics in physics
     years:
