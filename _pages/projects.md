@@ -4,7 +4,7 @@ title: Projects
 # uncomment the permalink line below to enable the page
 permalink: /projects/
 description: A growing collection of your personal and academic projects.
-nav: true
+nav: false
 nav_order: 2
 display_categories: [work, fun]
 horizontal: false
