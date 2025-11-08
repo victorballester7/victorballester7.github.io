@@ -1,0 +1,401 @@
+/* === INTRO SECTION === */
+.intro-section {
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: var(--border-1) solid var(--glass-border);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-3xl);
+    box-shadow: var(--shadow-light);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-section h1 {
+    font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-6xl));
+    font-weight: 300;
+    line-height: var(--space-2xl);
+    margin-bottom: var(--space-sm);
+    background: var(--gradient-primary-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px var(--primary-opacity-50);
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+.intro-text {
+    font-size: clamp(var(--font-size-lg), 3vw, var(--font-size-2xl));
+    color: var(--text-secondary);
+    line-height: var(--line-height-loose);
+    margin-bottom: var(--space-xl);
+}
+
+.warning-box {
+    background: var(--secondary-opacity-10);
+    border: var(--border-2) solid var(--secondary-opacity-20);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    color: var(--text-secondary);
+    font-size: var(--font-size-base);
+    margin-top: var(--space-lg);
+}
+
+.intro-section::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle, var(--secondary) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: moveStars 20s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveStars {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50px, -50px); }
+}
+
+/* === DOWNLOAD FULL === */
+.download-full-section {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: var(--border-1) solid var(--glass-border);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-light);
+    text-align: center;
+}
+
+.download-full-section h2 {
+    color: var(--text-primary); 
+    margin-bottom: var(--space-lg); 
+    font-weight: var(--font-weight-light);
+}
+
+.download-full-link {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-md);
+    background: transparent;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: var(--space-lg) var(--space-3xl);
+    border-radius: var(--radius-xl);
+    border: var(--border-2) solid var(--secondary);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    box-shadow: var(--shadow-secondary);
+    transition: var(--transition);
+}
+
+.download-full-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    transition: var(--transition);
+    z-index: -1;
+    background: var(--gradient-secondary);
+}
+
+.download-full-link:hover::before {
+    transform: translateX(0);
+}
+
+.download-full-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px var(--secondary-opacity-20);
+}
+
+.download-full-link img {
+    width: 30px;
+    height: auto;
+}
+
+.download-full-link svg {
+    width: 24px;
+    height: auto;
+    fill: var(--secondary-dark);
+    transition: var(--transition);
+}
+
+.download-full-link:hover svg {
+    fill: var(--secondary);
+    transform: translateX(5px);
+}
+
+/* === MATHEMATICS SECTION === */
+.mathematics-section {
+    background: 
+        radial-gradient(circle at 80% 20%, var(--primary-opacity-10) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, var(--secondary-opacity-10) 0%, transparent 50%);
+    backdrop-filter: blur(20px);
+    border: var(--border-1) solid var(--glass-border);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-3xl);
+    box-shadow: var(--shadow-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: var(--border-4);
+    background: var(--gradient-primary-secondary);
+    border-radius: var(--radius-xl);
+}
+
+.physics-section .section-title::after {
+    background: linear-gradient(135deg, var(--tertiary), var(--quaternary));
+}
+
+/* === YEAR SECTIONS === */
+.year-section {
+    margin-bottom: var(--space-2xl);
+}
+
+.year-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.year-badge {
+    background: var(--gradient-primary-secondary);
+    color: var(--text-primary);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-xl);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    box-shadow: var(--shadow-primary);
+}
+
+.year-text {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+}
+
+/* === PDF LINKS GRID === */
+.pdf-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+}
+
+.pdf-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border: var(--border-1) solid var(--glass-border);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.pdf-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--primary-opacity-10), transparent);
+    transition: left 0.5s ease;
+}
+
+.level-section .pdf-link::before {
+    background: linear-gradient(90deg, transparent, var(--tertiary-opacity-10), transparent);
+}
+
+.pdf-link:hover::before {
+    left: 100%;
+}
+
+.pdf-link:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+    border-color: var(--primary-opacity-20);
+}
+
+.level-section .pdf-link:hover {
+    border-color: var(--tertiary-opacity-20);
+}
+
+.pdf-link img {
+    width: 30px;
+    height: auto;
+}
+
+.pdf-icon {
+    width: 30px;
+    height: auto;
+}
+
+.pdf-text {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    flex-grow: 1;
+}
+
+.pdf-link svg {
+    width: 24px;
+    height: auto;
+    flex-shrink: 0;
+    fill: var(--primary-dark);
+    transition: var(--transition);
+}
+
+.pdf-link:hover svg {
+    fill: var(--primary);
+    transform: translateX(5px);
+}
+
+.level-section .pdf-link svg {
+    fill: var(--tertiary-dark);
+}
+
+.level-section .pdf-link:hover svg {
+    fill: var(--tertiary);
+}
+
+/* === PHYSICS SECTION === */
+.physics-section {
+    background: 
+        radial-gradient(circle at 25% 25%, var(--tertiary-opacity-10) 0%, transparent 60%),
+        radial-gradient(circle at 75% 75%, var(--quaternary-opacity-10) 0%, transparent 60%);
+    backdrop-filter: blur(20px);
+    border: var(--border-1) solid var(--glass-border);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-3xl);
+    box-shadow: var(--shadow-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.level-section {
+    margin-bottom: var(--space-xl);
+}
+
+.level-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.level-badge {
+    background: linear-gradient(135deg, var(--tertiary), var(--quaternary));
+    color: var(--text-primary);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-xl);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    box-shadow: var(--shadow-tertiary);
+}
+
+.level-text {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .intro-section,
+    .mathematics-section,
+    .physics-section {
+        padding: var(--space-xl);
+    }
+
+    .pdf-links {
+        grid-template-columns: 1fr;
+    }
+
+    .year-title,
+    .level-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-section,
+    .mathematics-section,
+    .physics-section {
+        padding: var(--space-lg);
+    }
+
+    .download-full-link {
+        gap: var(--space-sm);
+        padding: var(--space-sm) var(--space-md);
+        font-size: var(--font-size-md);
+    }
+
+    .pdf-text {
+        font-size: var(--font-size-md);
+    }
+
+    .download-full-link svg,
+    .pdf-link svg {
+        width: 16px;
+        height: auto;
+    }
+
+    .download-full-link img,
+    .pdf-link img {
+        width: 22px;
+        height: auto;
+    }
+
+    .intro-section h1 {
+        font-size: var(--font-size-3xl);
+    }
+}
+
+/* === ANIMACIONS === */
+.intro-section { animation: slideInUp 0.8s ease-out; }
+.download-full-section { animation: slideInUp 1s ease-out 0.2s both; }
+.mathematics-section { animation: slideInUp 1s ease-out 0.4s both; }
+.physics-section { animation: slideInUp 1s ease-out 0.6s both; }
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

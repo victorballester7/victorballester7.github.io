@@ -1,0 +1,162 @@
+/* === VARIABLES === */
+:root {
+    /* Colors principals */
+    --primary: #3498db;
+    --secondary: #27ae60;
+    --tertiary: #9b59b6;
+    --quaternary: #e74c3c;
+    --cv: #333333;
+    
+    --la-llauna: #B40F0A;
+    --uab: #008539;
+    --dauphine: #2e4588;
+    --imperial: #0000cc;
+    --nesin-mathematics-village: #80b2da;
+    --bgsmath: #3190c8;
+    --upc: #007bc0;
+    --aily-labs: #48ff9b;
+    --simon-marais: #f68e2d;
+    --rsef: #075c2b;
+
+    --united-kingdom: #00247D;
+    --france: #0055A4;
+    --spain: #AA151B;
+    --turkey: #e30a17;
+    --iceland: #02529C;
+    --jordan: #000000;
+    --catalonia: #F7E503;
+
+    --winter: #1E90FF;
+    --spring: #32CD32;
+    --summer: #FF8C00;
+    --autumn: #A0522D;
+
+    /* Colors amb opacitats usando color-mix */
+    --primary-light: color-mix(in srgb, var(--primary) 80%, white);
+    --primary-dark: color-mix(in srgb, var(--primary) 80%, black);
+    --primary-opacity-10: color-mix(in srgb, var(--primary) 10%, transparent);
+    --primary-opacity-20: color-mix(in srgb, var(--primary) 20%, transparent);
+    --primary-opacity-30: color-mix(in srgb, var(--primary) 30%, transparent);
+    --primary-opacity-50: color-mix(in srgb, var(--primary) 50%, transparent);
+
+    --secondary-light: color-mix(in srgb, var(--secondary) 80%, white);
+    --secondary-dark: color-mix(in srgb, var(--secondary) 80%, black);
+    --secondary-opacity-05: color-mix(in srgb, var(--secondary) 5%, transparent);
+    --secondary-opacity-10: color-mix(in srgb, var(--secondary) 10%, transparent);
+    --secondary-opacity-20: color-mix(in srgb, var(--secondary) 20%, transparent);
+    --secondary-opacity-30: color-mix(in srgb, var(--secondary) 30%, transparent);
+
+
+    --tertiary-light: color-mix(in srgb, var(--tertiary) 80%, white);
+    --tertiary-dark: color-mix(in srgb, var(--tertiary) 80%, black);
+    --tertiary-opacity-10: color-mix(in srgb, var(--tertiary) 10%, transparent);
+    --tertiary-opacity-20: color-mix(in srgb, var(--tertiary) 20%, transparent);
+    --tertiary-opacity-30: color-mix(in srgb, var(--tertiary) 30%, transparent);
+
+    --quaternary-light: color-mix(in srgb, var(--quaternary) 80%, white);
+    --quaternary-dark: color-mix(in srgb, var(--quaternary) 80%, black);
+    --quaternary-opacity-10: color-mix(in srgb, var(--quaternary) 10%, transparent);
+    --quaternary-opacity-20: color-mix(in srgb, var(--quaternary) 20%, transparent);
+
+    --white-opacity-60: color-mix(in srgb, white 60%, transparent);
+
+    --black-opacity-20: color-mix(in srgb, black 20%, transparent);
+    --black-opacity-30: color-mix(in srgb, black 30%, transparent);
+    --black-opacity-40: color-mix(in srgb, black 40%, transparent);
+
+
+    /* Colors de text */
+    --text-primary: #ffffff;
+    --text-secondary: #e5e7eb;
+    --text-muted: #9ca3af;
+
+    /* Colors de fons */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --bg-card: var(--bg-secondary);
+    --bg-card-hover: var(--bg-tertiary);
+    --bg-header: var(--bg-secondary);
+
+    /* Glassmorphism */
+    --glass-bg: color-mix(in srgb, var(--bg-secondary) 80%, transparent);
+    --glass-border: color-mix(in srgb, #94a3b8 10%, transparent);
+    
+    /* Gradients */
+    --bg-gradient: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
+    --gradient-primary-secondary: linear-gradient(135deg, var(--primary), var(--secondary));
+    --gradient-primary-secondary-dark: linear-gradient(135deg, var(--primary-dark), var(--secondary-dark));
+    --gradient-secondary: linear-gradient(135deg, var(--secondary-opacity-30), var(--secondary-opacity-20));
+    --gradient-tertiary: linear-gradient(135deg, var(--tertiary-opacity-30), var(--tertiary-opacity-20));
+
+    /* Colors específics xarxes socials */
+    --color-email: #000;
+    --color-telegram: #3390ec;
+    --color-whatsapp: #25D366;
+    --color-github: #181717;
+    --color-linkedin: #0077B7;
+
+    /* Ombres */
+    --shadow-light: 0 8px 32px var(--black-opacity-40);
+    --shadow-card: 0 10px 25px var(--black-opacity-20);
+    --shadow-primary: 0 10px 25px var(--primary-opacity-20);
+    --shadow-secondary: 0 10px 25px var(--secondary-opacity-20);
+    --shadow-tertiary: 0 10px 25px var(--tertiary-opacity-20);
+    --shadow-quaternary: 0 10px 25px var(--quaternary-opacity-20);
+    --shadow-image: 0 20px 40px var(--black-opacity-30);
+    --shadow-image-hover: 0 25px 50px color-mix(in srgb, black 40%, transparent);
+
+    /* Espaciado */
+    --space-xxs: 0.15rem;
+    --space-xs: 0.5rem;
+    --space-s: 0.75rem;
+    --space-sm: 1rem;
+    --space-m: 1.25rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+    --space-3xl: 6rem;
+
+    /* Typography */
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-size-xs: 0.5rem;
+    --font-size-s: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    --font-size-6xl: 3.75rem;
+
+    /* Font weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    /* Line heights */
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.6;
+    --line-height-loose: 1.8;
+
+    /* Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 50%;
+
+    /* Border widths */
+    --border-1: 1px;
+    --border-2: 2px;
+    --border-4: 4px;
+    --border-8: 8px;
+
+    /* Animations */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

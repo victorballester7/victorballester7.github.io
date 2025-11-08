@@ -1,0 +1,263 @@
+/* === INTRO SECTION === */
+.intro-section {
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: var(--border-1) solid var(--glass-border);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-3xl);
+    box-shadow: var(--shadow-light);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-section h1 {
+    font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-6xl));
+    font-weight: 300;
+    line-height: var(--space-2xl);
+    margin-bottom: var(--space-sm);
+    background: var(--gradient-primary-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px var(--primary-opacity-50);
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+.intro-text {
+    font-size: clamp(var(--font-size-lg), 3vw, var(--font-size-2xl));
+    color: var(--text-secondary);
+    line-height: var(--line-height-loose);
+}
+
+.intro-section::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle, var(--tertiary) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: moveStars 20s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveStars {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50px, -50px); }
+}
+
+/* === RESEARCH SECTIONS === */
+.research-section {
+    background: 
+        radial-gradient(circle at 20% 80%, var(--quaternary-opacity-10) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, var(--tertiary-opacity-10) 0%, transparent 50%);
+    backdrop-filter: blur(20px);
+    border: var(--border-1) solid var(--glass-border);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-3xl);
+    box-shadow: var(--shadow-light);
+    position: relative;
+    overflow: hidden;
+}
+
+/* === SECTION HEADERS === */
+.section-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-xl);
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.section-title svg {
+    fill: var(--tertiary);
+    width: 60px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-2xl);
+}
+
+.section-title::after {
+    content: '';
+    flex-grow: 1;
+    height: var(--border-2);
+    background: var(--gradient-tertiary);
+    border-radius: var(--radius-xl);
+    margin-left: var(--space-lg);
+}
+
+/* === SUBSECTION TITLES === */
+.subsection-title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin: 0 0 var(--space-lg) 0;
+    padding: var(--space-sm) var(--space-lg);
+    background: linear-gradient(135deg, var(--quaternary), var(--tertiary));
+    border-radius: var(--radius-xl);
+    display: inline-block;
+}
+
+/* === RESEARCH LINKS === */
+.research-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.research-links a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border: var(--border-1) solid var(--glass-border);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.research-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--tertiary-opacity-10), transparent);
+    transition: left 0.5s ease;
+}
+
+.research-links a:hover::before {
+    left: 100%;
+}
+
+.research-links a:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+    border-color: var(--tertiary-opacity-20);
+}
+
+/* === PDF ICON === */
+.research-links img {
+    width: 50px;
+    height: auto;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px var(--black-opacity-20));
+}
+
+/* === RESEARCH INFO === */
+.research-info {
+    flex-grow: 1;
+}
+
+.research-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: inherit;
+    margin-bottom: var(--space-xs);
+    line-height: var(--line-height-relaxed);
+}
+
+.research-date {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* === ARROW ICON === */
+.research-links svg {
+    width: 24px;
+    height: auto;
+    fill: var(--tertiary);
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.research-links a:hover svg {
+    transform: translateX(5px);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .section-title {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .section-title::after {
+        width: 100%;
+        margin-left: 0;
+        margin-top: var(--space-sm);
+    }
+
+    .intro-section,
+    .research-section {
+        padding: var(--space-xl);
+    }
+
+    .research-links {
+        grid-template-columns: 1fr;
+    }
+
+    .research-links a {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-md);
+    }
+
+    .research-info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-section,
+    .research-section {
+        padding: var(--space-lg);
+    }
+
+    .intro-section h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .subsection-title {
+        font-size: var(--font-size-xl);
+    }
+}
+
+/* === ANIMACIONS === */
+.intro-section { animation: slideInUp 0.8s ease-out; }
+.youth-research { animation: slideInUp 1s ease-out 0.2s both; }
+.phd-research { animation: slideInUp 1s ease-out 0.4s both; }
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

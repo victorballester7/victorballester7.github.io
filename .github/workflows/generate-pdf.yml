@@ -1,0 +1,47 @@
+# .github/workflows/generate-pdf.yml
+# AQUESTA ÉS LA CONFIGURACIÓ DE GITHUB ACTIONS
+name: Generate CV PDF
+
+# QUAN S'EXECUTA L'ACTION:
+on:
+  push:
+    paths:
+      - 'cv-creator.html'    # Quan es modifica el CV
+      - 'css/**'             # Quan es modifica qualsevol CSS
+  workflow_dispatch:         # També es pot executar manualment des de GitHub
+
+# TASCA PRINCIPAL:
+jobs:
+  generate-pdf:
+    runs-on: ubuntu-latest   # S'executa en un servidor Ubuntu
+    
+    steps:
+    # DESCARREGA EL CODI DEL REPOSITORI
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    # INSTAL·LA NODE.JS (necessari per Puppeteer)  
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    # INSTAL·LA PUPPETEER (navegador headless)
+    - name: Install dependencies
+      run: |
+        npm init -y
+        npm install puppeteer
+        
+    # EXECUTA EL NOSTRE SCRIPT DE GENERACIÓ
+    - name: Generate PDF
+      run: |
+        node js/generate-pdf.js
+        
+    # PUJA EL PDF GENERAT AL REPOSITORI
+    - name: Commit and push PDF
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add assets/pdfs/cv/victor-ballester-cv.pdf
+        git commit -m "Auto-update CV PDF" || exit 0
+        git push

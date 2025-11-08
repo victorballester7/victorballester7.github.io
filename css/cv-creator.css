@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: var(--line-height-normal);
+}
+
+header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+header h1 {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+}
+
+header address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+header address a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-sm);
+    text-decoration: none;
+    color: var(--cv);
+    font-size: var(--font-size-s);
+    border: var(--border-1) solid currentColor;
+    border-radius: var(--radius-lg);
+}
+
+header address a svg,
+header address a img {
+    width: 20px;
+    height: auto;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+section {
+    margin-bottom: var(--space-xl);
+}
+
+section h2 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--cv);
+}
+
+section h2 svg {
+    width: 45px;
+    height: auto;
+    fill: var(--cv);
+}
+
+section h2::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: var(--cv);
+    border-radius: var(--radius-full);
+    margin-left: var(--space-md);
+}
+
+article {
+    border: var(--border-1) solid var(--cv);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin: var(--space-m) 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+article div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*=== SELECTED PROJECTS AND REPORTS ====*/
+article div:has(span):has(div) a:first-child {
+    margin-right: var(--space-s);
+}
+
+article div:has(span):has(div) a svg {
+    width: 20px;
+    height: auto;
+    fill: currentColor;
+}
+
+article h3 {
+    
+    font-weight: var(--font-weight-bold);
+    color: var(--cv);
+}
+
+.skills h3,
+.others h3 {
+    margin-bottom: var(--space-lg);
+}
+
+article p {
+    display: inline-block;
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-bold);
+    color: currentColor;
+}
+
+.winter { color: var(--winter); }
+.spring { color: var(--spring); }
+.summer { color: var(--summer); }
+.autumn { color: var(--autumn); }
+
+
+article div a,
+article div span {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    text-decoration: none;
+    color: currentColor;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    margin: var(--space-sm) 0;
+}
+
+article div span {
+    white-space: nowrap;
+}
+
+.la-llauna { color: var(--la-llauna); }
+.uab { color: var(--uab); }
+.dauphine { color: var(--dauphine); }
+.imperial { color: var(--imperial); }
+.nesin-mathematics-village { color: var(--nesin-mathematics-village); }
+.bgsmath { color: var(--bgsmath); }
+.upc { color: var(--upc); }
+.aily-labs { color: var(--aily-labs); }
+.simon-marais { color: var(--simon-marais); }
+.rsef { color: var(--rsef); }
+
+.united-kingdom { color: var(--united-kingdom); }
+.france { color: var(--france); }
+.spain { color: var(--spain); }
+.turkey { color: var(--turkey); }
+.iceland { color: var(--iceland);}
+.jordan { color: var(--jordan);}
+.catalonia { color: var(--catalonia); }
+
+article div a img,
+article div span svg {
+    width: 40px;
+    height: auto;
+    fill: currentColor;
+}
+
+article div a svg {
+    width: 20px;
+    height: auto;
+    fill: currentColor;
+}
+
+article ul {
+    list-style: disc;
+    padding-left: var(--space-xl);
+}
+
+.skills article ul,
+.others article ul {
+    column-width: 140px;
+    column-gap: var(--space-xs);
+    column-fill: balance;
+}
+
+article ul li {
+    color: var(--cv);
+    font-size: var(--font-size-sm);
+}
+
+article ul li a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+article ul li svg,
+article ul li img  {
+    width: 22px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: var(--space-xs);
+}

@@ -1,0 +1,19 @@
+RewriteEngine On
+
+# Bloquejar ruta /cv-creator
+RewriteRule ^cv-creator/?$ / [L,R=302]
+
+# Treure .html NOMÉS si el fitxer .html existeix
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME}.html -f 
+RewriteRule ^([^\.]+)$ $1.html [NC,L] 
+
+# Redirigir .html a sense extensió
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
+
+# Si NO és un fitxer i NO és un directori → redirigir a /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ / [L,R=302]

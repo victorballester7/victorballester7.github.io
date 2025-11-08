@@ -1,0 +1,18 @@
+{
+    "name": "victor-portfolio-pdf-generator",
+    "version": "1.0.0",
+    "description": "Generador automàtic de PDF per al CV de Víctor",
+    "main": "js/generate-pdf.js",
+    "scripts": {
+        "generate-pdf": "cd . && node js/generate-pdf.js",
+        "pdf": "npm run generate-pdf",
+        "dev": "npm run generate-pdf && echo PDF generat correctament!",
+        "test": "echo \"No tests specified\""
+    },
+    "dependencies": {
+        "puppeteer": "^21.0.0"
+    },
+    "keywords": ["pdf", "cv", "puppeteer"],
+    "author": "Víctor Ballester Ribó",
+    "license": "MIT"
+}

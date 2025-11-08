@@ -1,0 +1,204 @@
+/* === FOOTER === */
+footer {
+    background: var(--glass-bg);
+    backdrop-filter: blur(40px);
+    border-top: var(--border-1) solid var(--glass-border);
+    margin-top: var(--space-xl);
+    position: relative;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg);
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 0.5fr auto 0.5fr;
+    gap: var(--space-xl);
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-lg);
+}
+
+.footer-main address {
+    justify-self: right;
+}
+
+.footer-info h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-light);
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+    background: var(--gradient-primary-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-info p {
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+}
+
+.footer-links {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    transition: var(--transition);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+    background: var(--primary-opacity-10);
+}
+
+.footer-social {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-card);
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    transition: var(--transition);
+    border: var(--border-1) solid var(--glass-border);
+}
+
+.footer-social a svg {
+    width: 20px;
+    height: auto;
+    transition: var(--transition);
+}
+
+.footer-social a svg path {
+    fill: var(--text-muted);
+    transition: var(--transition);
+}
+
+.footer-social a.telegram svg path:last-child {
+    fill: var(--bg-card);
+}
+
+.footer-social a:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+}
+
+.footer-social a.email:hover {
+    background: var(--text-primary);
+}
+
+.footer-social a.email:hover svg path {
+    fill: var(--color-email);
+}
+
+.footer-social a.telegram:hover {
+    background: var(--color-telegram);
+}
+
+.footer-social a.telegram:hover svg path:first-child {
+    fill: var(--text-primary);
+}
+
+.footer-social a.telegram:hover svg path:last-child {
+    fill: var(--color-telegram);
+}
+
+.footer-social a.whatsapp:hover {
+    background: var(--color-whatsapp);
+}
+
+.footer-social a.whatsapp:hover svg path{
+    fill: var(--text-primary);
+}
+
+.footer-social a.github:hover {
+    background: var(--color-github);
+}
+
+.footer-social a.github:hover svg path {
+    fill: var(--text-primary);
+}
+
+.footer-social a.linkedin:hover {
+    background: var(--color-linkedin);
+}
+
+.footer-social a.linkedin:hover svg path {
+    fill: var(--text-primary);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: var(--space-md);
+    border-top: var(--border-1) solid var(--glass-border);
+}
+
+.footer-bottom strong {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-lg);
+    }
+
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-main address {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-sm);
+    }
+}
+
+/* === ANIMACIONS === */
+footer {
+    animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
