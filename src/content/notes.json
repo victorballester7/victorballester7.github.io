@@ -1,0 +1,204 @@
+{
+    "mathematics": {
+        "fullSummary": {
+            "title": "Full summaries of Mathematics",
+            "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/main_math.pdf"
+        },
+        "years": [
+            {
+                "year": "1st Year",
+                "subtitle": "Foundation",
+                "subjects": [
+                    {
+                        "title": "Fundamentals of mathematics",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Fundamentals_of_mathematics.pdf"
+                    },
+                    {
+                        "title": "Linear algebra",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Linear_algebra.pdf"
+                    },
+                    {
+                        "title": "Real-valued functions",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Real-valued_functions.pdf"
+                    }
+                ]
+            },
+            {
+                "year": "2nd Year",
+                "subtitle": "Intermediate",
+                "subjects": [
+                    {
+                        "title": "Algebraic structures",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Algebraic_structures.pdf"
+                    },
+                    {
+                        "title": "Discrete mathematics",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Discrete_mathematics.pdf"
+                    },
+                    {
+                        "title": "Functions of several variables",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Functions_of_several_variables.pdf"
+                    },
+                    {
+                        "title": "Linear geometry",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Linear_geometry.pdf"
+                    },
+                    {
+                        "title": "Mathematical analysis",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Mathematical_analysis.pdf"
+                    },
+                    {
+                        "title": "Numerical methods",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Numerical_methods.pdf"
+                    }
+                ]
+            },
+            {
+                "year": "3rd Year",
+                "subtitle": "Advanced",
+                "subjects": [
+                    {
+                        "title": "Complex analysis",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Complex_analysis.pdf"
+                    },
+                    {
+                        "title": "Differential equations",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Differential_equations.pdf"
+                    },
+                    {
+                        "title": "Differential geometry",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Differential_geometry.pdf"
+                    },
+                    {
+                        "title": "Galois theory",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Galois_theory.pdf"
+                    },
+                    {
+                        "title": "Probability",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Probability.pdf"
+                    },
+                    {
+                        "title": "Statistics",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Statistics.pdf"
+                    },
+                    {
+                        "title": "Topology",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Topology.pdf"
+                    }
+                ]
+            },
+            {
+                "year": "4th Year",
+                "subtitle": "Specialized",
+                "subjects": [
+                    {
+                        "title": "Algebraic topology",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Algebraic_topology.pdf"
+                    },
+                    {
+                        "title": "Dynamical systems",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Dynamical_systems.pdf"
+                    },
+                    {
+                        "title": "Harmonic analysis",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Harmonic_analysis.pdf"
+                    },
+                    {
+                        "title": "Linear models",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Linear_models.pdf"
+                    },
+                    {
+                        "title": "Numerical calculus",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Numerical_calculus.pdf"
+                    },
+                    {
+                        "title": "Numerical integration of partial differential equations",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Numerical_integration_of_partial_differential_equations.pdf"
+                    },
+                    {
+                        "title": "Partial differential equations",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Partial_differential_equations.pdf"
+                    },
+                    {
+                        "title": "Real and functional analysis",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Real_and_functional_analysis.pdf"
+                    },
+                    {
+                        "title": "Stochastic processes",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Stochastic_processes.pdf"
+                    }
+                ]
+            },
+            {
+                "year": "5th Year",
+                "subtitle": "Master Level",
+                "subjects": [
+                    {
+                        "title": "Advanced dynamical systems",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Advanced_dynamical_systems.pdf"
+                    },
+                    {
+                        "title": "Advanced probability",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Advanced_probability.pdf"
+                    },
+                    {
+                        "title": "Advanced topics in functional analysis and PDEs",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Advanced_topics_in_functional_analysis_and_PDEs.pdf"
+                    },
+                    {
+                        "title": "Introduction to control theory",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Introduction_to_control_theory.pdf"
+                    },
+                    {
+                        "title": "Introduction to nonlinear elliptic PDEs",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Introduction_to_nonlinear_elliptic_PDEs.pdf"
+                    },
+                    {
+                        "title": "Montecarlo methods",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Montecarlo_methods.pdf"
+                    },
+                    {
+                        "title": "Numerical methods for PDEs",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Numerical_methods_for_PDEs.pdf"
+                    },
+                    {
+                        "title": "Stochastic calculus",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Stochastic_calculus.pdf"
+                    }
+                ]
+            }
+        ]
+    },
+    "physics": {
+        "levels": [
+            {
+                "level": "Basic Level",
+                "subtitle": "Foundation Physics",
+                "subjects": [
+                    {
+                        "title": "Electricity and magnetism",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Electricity_and_magnetism.pdf"
+                    },
+                    {
+                        "title": "Mechanics and special relativity",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Mechanics_and_special_relativity.pdf"
+                    },
+                    {
+                        "title": "Structure of matter and thermodynamics",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Structure_of_matter_and_thermodynamics.pdf"
+                    }
+                ]
+            },
+            {
+                "level": "Advanced Level",
+                "subtitle": "Specialized Physics",
+                "subjects": [
+                    {
+                        "title": "Fluid mechanics",
+                        "url": "https://github.com/victorballester7/complete-summaries/releases/latest/download/Fluid_mechanics.pdf"
+                    }
+                ]
+            }
+        ]
+    }
+}

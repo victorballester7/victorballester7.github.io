@@ -1,0 +1,78 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+import notes from '../content/notes.json';
+import '../styles/notes-in-mathematics.css';
+---
+
+<Layout title="Notes in Mathematics - Víctor Ballester Ribó" description="Notes and resources related to various topics in mathematics by Víctor Ballester Ribó.">
+	<Header />
+    <main>
+        <section>
+            <h1>Notes in Mathematics</h1>
+            <p>This website intends to summarize some notes about each "important" subject in Mathematics and Physics degree at Autonomous University of Barcelona (UAB) and at Paris Dauphine - PSL University. These summaries aim to provide a concise overview of the key concepts and topics covered in each subject, serving as a helpful resource for students and anyone interested in these fields of study.</p>
+            <p><strong>Note:</strong> You can download the sections separately as you like or the whole file of Mathematics. Keep in mind that downloading sections separately may cause some inconsistencies in references of theorems, definitions... from other sections.</p>
+        </section>
+
+        <section>
+            <h2>{notes.mathematics.fullSummary.title}</h2>
+            <a href={notes.mathematics.fullSummary.url} target="_blank">
+                <img src="/images/logos/others/pdf.svg" alt="PDF Icon">
+                Mathematics
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 11">
+                    <path d="M7.793.293A1 1 0 019.207.293L13.707 4.793A1 1 0 0113.707 6.207L9.207 10.707A1 1 0 017.793 9.293L10.5 6.5H1A1 1 0 011 4.5H10.5L7.793 1.707A1 1 0 017.793.293"/>
+                </svg>
+            </a>
+        </section>
+
+        <section>
+            <h2>Mathematics</h2>
+            {notes.mathematics.years.map(yearData => (
+                <article>
+                    <h3>
+                        <img src="/images/logos/others/pdf.svg" alt="PDF Icon">
+                        <small>{yearData.year}</small> {yearData.subtitle}
+                    </h3>
+                    <ul>
+                        {yearData.subjects.map(subject => (
+                            <li>
+                                <a href={subject.url} target="_blank">
+                                    {subject.title}
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 11">
+                                        <path d="M7.793.293A1 1 0 019.207.293L13.707 4.793A1 1 0 0113.707 6.207L9.207 10.707A1 1 0 017.793 9.293L10.5 6.5H1A1 1 0 011 4.5H10.5L7.793 1.707A1 1 0 017.793.293"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </article>
+            ))}
+        </section>
+
+        <section>
+            <h2>Topics in Physics</h2>
+            {notes.physics.levels.map(levelData => (
+                <article>
+                    <h3>
+                        <img src="/images/logos/others/pdf.svg" alt="PDF Icon">
+                        <small>{levelData.level}</small> {levelData.subtitle}
+                    </h3>
+                    <ul>
+                        {levelData.subjects.map(subject => (
+                            <li>
+                                <a href={subject.url} target="_blank">
+                                    {subject.title}
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 11">
+                                        <path d="M7.793.293A1 1 0 019.207.293L13.707 4.793A1 1 0 0113.707 6.207L9.207 10.707A1 1 0 017.793 9.293L10.5 6.5H1A1 1 0 011 4.5H10.5L7.793 1.707A1 1 0 017.793.293"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </article>
+            ))}
+        </section>
+    </main>
+    <Footer />
+</Layout>

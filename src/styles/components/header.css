@@ -1,0 +1,277 @@
+/* ============================================
+    Víctor Ballester - CSS HEADER 
+============================================ */
+
+/* === ANIMACIONS === */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === GLOBAL === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--color-gray-900);
+}
+
+body {
+    font-family: var(--font-primary);
+    background: var(--color-gray-900);
+    color: var(--color-white);
+    line-height: var(--space-xl);
+}
+
+
+/* === HEADER === */
+header {
+    background: var(--color-black);
+    position: sticky;
+    box-shadow: var(--shadow-sm) var(--color-primary);
+    animation: slideInDown 1s ease-out;
+    z-index: 1;
+}
+
+header nav {
+    max-width: var(--container-width-lg);
+    margin: 0 auto;
+    padding: var(--space-2xl) var(--space-2xl);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3xl);
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav a {
+    color: var(--color-gray-200);
+    text-decoration: none;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--border-radius-lg);
+    background: var(--color-gray-800);
+    transition: var(--transition-base);
+    position: relative;
+    display: block;
+}
+
+header nav a:hover {
+    color: var(--color-primary);
+    background: var(--color-primary-opacity);
+}
+
+header nav a[aria-current="page"]:hover {
+    background: var(--color-primary-opacity);
+}
+
+header nav a[aria-current="page"] {
+    color: var(--color-white);
+    background: var(--color-primary-dark);
+    border-bottom: var(--border-width-thick) solid var(--color-primary);
+}
+
+header nav button#mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: var(--font-size-lg);
+    padding: var(--space-md);
+    cursor: pointer;
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-base);
+}
+
+/* CV Button */
+header nav ul li:last-child a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 150px;
+    height: 44px;
+    padding: 0;
+}
+
+header nav ul li:last-child a, 
+header nav ul li:last-child a span, 
+header nav ul li:last-child a svg {
+    transition: all var(--transition-base);
+}
+
+header nav ul li:last-child a span {
+    width: 70%;
+    text-align: center;
+    font-weight: var(--font-weight-semibold);
+}
+
+header nav ul li:last-child a svg {
+    width: 30%;
+    height: 100%;
+    background: var(--color-primary-dark);
+    fill: currentColor;
+    padding: var(--space-sm) var(--space-xs);
+    box-sizing: border-box;
+}
+
+header nav ul li:last-child a:hover span {
+    width: 0;
+}
+
+header nav ul li:last-child a:hover svg {
+    width: 100%;
+    fill: var(--color-white);
+    background: var(--color-primary);
+}
+
+header nav input[type="checkbox"] {
+    position: absolute; /* fuera del flujo */
+    opacity: 0;         /* invisible */
+}
+
+main {
+    max-width: var(--container-width-xl);
+    margin: 0 auto;
+    padding: var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3xl);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    header nav {
+        padding: var(--space-xl) var(--space-2xl);
+    }
+
+    header nav label {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: calc(4px * 3 + 11px * 2);
+        cursor: pointer;
+        background: none;
+        border: none;
+        z-index: 2;
+    }
+
+    header nav label span {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 4px;
+        border-radius: 2px;
+        background: var(--color-primary);
+        transition: none 0.35s cubic-bezier(.5,-0.35,.35,1.5) 0s;
+    }
+
+    header nav label span:first-of-type {
+        bottom: calc(50% + 11px + 2px);
+        transition-property: bottom, transform;
+        transition-delay: calc(0s + 0.35s), 0s;
+    }
+
+    header nav label span:nth-of-type(2) {
+        top: calc(50% - 2px);
+        transition-property: opacity;
+        transition-delay: calc(0s + 0.35s);
+    }
+
+    header nav label span:last-of-type {
+        top: calc(50% + 11px + 2px);
+        transition-property: top, transform;
+        transition-delay: calc(0s + 0.35s), 0s;
+    }
+
+    header nav input:checked ~ label span:first-of-type {
+        bottom: calc(50% - 2px);
+        transform: rotate(135deg);
+        transition-delay: 0s, calc(0s + 0.35s);
+    }
+
+    header nav input:checked ~ label span:nth-of-type(2) {
+        opacity: 0;
+        transition-duration: 0s;
+        transition-delay: calc(0s + 0.35s);
+    }
+
+    header nav input:checked ~ label span:last-of-type {
+        top: calc(50% - 2px);
+        transform: rotate(225deg);
+        transition-delay: 0s, calc(0s + 0.35s);
+    }
+
+    header nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: var(--transition-base);
+    }
+
+    header nav input:checked ~ ul {
+        max-height: 300px;
+    }
+
+    header nav ul li:last-child a {
+        width: 100%;
+        height: 60px;
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: var(--space-xl) var(--space-2xl);
+        border-radius: 0;
+        font-size: var(--font-size-base);
+    }
+
+    header nav ul li:last-child a span {
+        padding-left: var(--space-2xl);
+        text-align: left;
+        width: 85%;
+    }
+
+    header nav ul li:last-child:hover a span {
+        padding-left: 0;
+    }
+
+    header nav ul li:last-child a svg {
+        width: 15%;
+    }
+
+    main {
+        padding: var(--space-xl) 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav {
+        padding: var(--space-md) var(--space-xl);
+    }
+
+    header nav ul li a {
+        padding: var(--space-md) var(--space-xl);
+    }
+}

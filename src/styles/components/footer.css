@@ -1,0 +1,164 @@
+/* ============================================
+    Víctor Ballester - CSS FOOTER
+============================================ */
+
+/* === ANIMACIONS === */
+footer {
+    animation: slideInUp 1s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 0.5fr auto 0.5fr;
+    gap: var(--space-3xl);
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-black);
+    margin-top: var(--space-5xl);
+    padding: var(--space-2xl);
+}
+
+footer address {
+    justify-self: right;
+}
+
+footer section h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-light);
+    padding-bottom: var(--space-sm);
+    background: linear-gradient(to right, var(--color-primary), var(--color-tertiary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer section p {
+    color: var(--color-gray-300);
+    font-size: var(--font-size-sm);
+}
+
+footer nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--space-2xl);
+}
+
+footer nav ul a {
+    color: var(--color-gray-200);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    transition: var(--transition-base);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--border-radius-sm);
+}
+
+footer nav ul a:hover {
+    color: var(--color-primary);
+    background: var(--color-primary-opacity);
+}
+
+footer nav ul a[aria-current="page"] {
+    color: var(--color-white);
+    border: var(--border-width-thick) solid var(--color-primary-dark);
+}
+
+footer address {
+    display: flex;
+    gap: var(--space-md);
+}
+
+footer address a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--color-gray-800);
+    text-decoration: none;
+    border-radius: var(--border-radius-lg);
+    transition: all var(--transition-base);
+}
+
+footer address a svg {
+    width: 20px;
+    height: auto;
+    transition: var(--transition-base);
+}
+
+footer address a svg path {
+    fill: var(--color-gray-500);
+    transition: var(--transition-base);
+}
+
+footer address a.telegram svg path:last-child {
+    fill: var(--color-gray-800);
+}
+
+footer address a.email:hover { background: var(--color-white); }
+footer address a.email:hover svg path { fill: var(--color-black); }
+footer address a.telegram:hover { background: var(--color-telegram); }
+footer address a.telegram:hover svg path:first-child { fill: var(--color-white); }
+footer address a.telegram:hover svg path:last-child { fill: var(--color-telegram); }
+footer address a.whatsapp:hover { background: var(--color-whatsapp); }
+footer address a.whatsapp:hover svg path{ fill: var(--color-white); }
+footer address a.github:hover { background: var(--color-github); }
+footer address a.github:hover svg path { fill: var(--color-white); }
+footer address a.linkedin:hover { background: var(--color-linkedin); }
+footer address a.linkedin:hover svg path { fill: var(--color-white); }
+
+footer strong {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--color-gray-100);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-2xl);
+    }
+
+    footer section h3 {
+        font-size: var(--font-size-xl);
+    }
+
+    footer nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    footer address {
+        margin: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: var(--space-2xl) var(--space-xl);
+    }
+
+    footer section h3 {
+        font-size: var(--font-size-lg);
+    }
+
+    footer nav ul {
+        align-items: center;
+        gap: var(--space-md);
+    }
+}

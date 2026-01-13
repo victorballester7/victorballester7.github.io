@@ -1,0 +1,150 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+import '../styles/index.css';
+---
+
+<Layout title="Víctor Ballester Ribó" description="Personal website of Víctor Ballester Ribó, PhD student in Aeronautics at Imperial College London.">
+	<Header />
+	<main>
+        <section>
+            <h1>Víctor Ballester Ribó</h1>
+            <h2>PhD student in Aeronautics at Imperial College London.</h2>
+            <div>
+                <figure>
+                    <img src="/images/personal/victor-ballester.jpg" alt="Víctor Ballester Ribó">
+                    <figcaption>Víctor Ballester Ribó, 2024</figcaption>
+                </figure>
+                <div class="info-vb">
+                    <a href="https://maps.app.goo.gl/BcZYDM2aGpPrA8MH9" target="_blank">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M256 32C167.67 32 96 96.51 96 176c0 128 160 304 160 304s160-176 160-304c0-79.49-71.67-144-160-144zm0 224a64 64 0 1 1 64-64 64.07 64.07 0 0 1-64 64z"></path>
+                            </svg>
+                        </span>
+                        <span>London, UK</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30">
+                                <clipPath id="a"><path d="M25 15h25v15zv15H0zH0V0zV0h25z"/></clipPath>
+                                <path d="M0 0v30h50V0z" fill="#012169"/>
+                                <path d="m0 0 50 30m0-30L0 30" stroke="#fff" stroke-width="6"/>
+                                <path d="m0 0 50 30m0-30L0 30" clip-path="url(#a)" stroke="#C8102E" stroke-width="4"/>
+                                <path d="M-1 11h22V-1h8v12h22v8H29v12h-8V19H-1z" fill="#C8102E" stroke="#FFF" stroke-width="2"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="https://www.imperial.ac.uk/" target="_blank">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 494.881 494.881">
+                                <path d="M196.782 63.877c-.067.913-.276 1.787-.276 2.719 0 25.56 20.716 46.269 46.273 46.269 25.588 0 46.286-20.71 46.286-46.269 0-.932-.222-1.806-.27-2.719zm170.017 214.324-65.993-144.592c-3.881-8.501-11.933-11.822-21.559-11.822h-71.872c-8.525 0-16.177 1.996-20.882 8.759l-9.122 13.156 9.835-3.751 32.864-12.561c13.845-5.289 29.272 1.756 34.481 15.43l26.135 68.445c5.228 13.692-1.55 29.193-15.427 34.482l-25.329 9.664c-6.175 10.232-17.32 16.693-29.438 16.693-5.849 0-24.418-4.521-30.76-5.904l-8.23 146.896a10.77 10.77 0 0 0 2.958 8.087 10.84 10.84 0 0 0 7.892 3.404h4.269v46.541c0 13.116 10.647 23.751 23.761 23.751 13.12 0 23.761-10.635 23.761-23.751v-46.541h17.302v46.541c0 13.116 10.641 23.751 23.761 23.751s23.76-10.635 23.76-23.751v-46.541h4.299a10.88 10.88 0 0 0 10.869-11.445l-9.153-175.039 25.815 56.528c4.54 9.989 16.3 14.306 26.215 9.794 9.948-4.542 14.333-16.283 9.788-26.224"/>
+                                <path d="m179.314 195.475 38.474 8.408c15.802 3.444 26.609 17.25 27.027 32.719l14.787-5.642c5.561-2.12 8.439-8.377 6.286-14.049l-26.135-68.439c-2.153-5.637-8.458-8.41-14.055-6.282l-48.069 18.366c-5.628 2.142-8.439 8.433-6.292 14.046z"/>
+                                <path d="M209.361 257.308c9.109 0 17.309-6.317 19.314-15.569 2.344-10.685-4.435-21.227-15.107-23.564l-41.26-9.016-5.16-1.132-10.611-27.771c-.578-1.554-.965-3.131-1.261-4.706l-25.452 36.666c0 .016-.019.031-.037.056l-.062.105c-3.801 5.452-4.336 13.012-2.171 18.52 2.141 5.395 7.603 10.65 14.203 12.094 3.315.728 64.338 14.317 67.604 14.317M182.869 16.56h14.221v33.092h91.974V16.56h7.553v41.808c0 4.287 3.672 8.283 8.285 8.283a8.276 8.276 0 0 0 8.28-8.283V8.279c0-4.602-3.027-8.279-9.897-8.279H182.869c-6.858 0-9.897 3.678-9.897 8.279 0 4.604 3.039 8.281 9.897 8.281"/>
+                            </svg>
+                        </span>
+                        <span>PhD Student</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 727 80" class="imperial">
+                                <path d="M301.453 0v80h51.893V66h-36.724V46h33.53V32.4h-33.53V14h36.724V0zm-63.056 12.918H227.22v26.96h11.177c8.745 0 15.169-4.24 15.169-13.483 0-9.595-6.424-13.477-15.169-13.477m.799 39.882H227.22V80h-15.168V0h27.144c17.023 0 30.337 7.727 30.337 26.4 0 18.4-13.412 26.4-30.337 26.4M485.079 0v14h18.761v52h-18.761v14h52.691V66h-18.761V14h18.761V0zm-50.888 24.8c0 9.638-5.589 12.678-15.169 12.678h-12.774v-24.56h12.774c10.397.004 15.169 3.882 15.169 11.882m15.967 0c0-18.673-12.774-24.8-29.539-24.8H391.08v80h15.168V50.4h12.774q1.05-.001 2.085-.038L436.562 80h16.808l-17.146-32.81c8.341-3.712 13.934-10.846 13.934-22.39m154.166-10.607 10.914 35.285h-21.832zM594.345 0l-26.346 80h15.967l5.443-17.6h29.826l5.443 17.6h15.967L614.299 0zm80.544 0v80h52.025V66h-36.856V0zM151.908 0l-19.161 47.04L113.587 0H92.031v80h14.371V20.188L124.764 62.4h15.967l18.362-42.212V80h14.37V0zM0 0v14h18.761v52H0v14h52.691V66H33.93V14h18.761V0z"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <article>
+            <p>
+                Hey there! I'm Víctor, a PhD student in Aeronautics at 
+                <a href="https://www.imperial.ac.uk/" target="_blank" class="type university">Imperial College London</a>.
+            </p>
+
+            <p>
+                I grew up in Badalona, a city near Barcelona. I did my undergraduate studies in Mathematics at 
+                <a href="https://www.uab.cat/" target="_blank" class="type university">Autonomous University of Barcelona</a>. 
+                Then I moved to Paris, where I pursued my master's degree in Applied and Theoretical Mathematics at 
+                <a href="https://dauphine.psl.eu/" target="_blank" class="type university">Dauphine-PSL University</a>.
+            </p>
+
+            <p>
+                During my undergraduate studies, I worked on a project titled 
+                <a href="https://github.com/victorballester7/final-bachelor-thesis" target="_blank" class="type project">Numerical Propagation of Trajectories of Earth-Orbiting Spacecraft</a> 
+                under the guidance of 
+                <a href="https://bgsmath.cat/people/?person=josep-maria-mondelo" target="_blank" class="type person">J. M. Mondelo</a>. 
+                This experience introduced me to the world of numerical methods and their applications in aerospace engineering.
+            </p>
+
+            <p>
+                During my master in Paris, I specialized in Computational Fluid Dynamics. My final project, 
+                <a href="https://github.com/victorballester7/final-master-thesis" target="_blank" class="type project">2D Turbulence Spreading</a>, 
+                was supervised by 
+                <a href="https://www.phys.ens.fr/~alexakis/" target="_blank" class="type person">A. Alexakis</a> and 
+                <a href="https://www.math.ens.psl.eu/~dormy/" target="_blank" class="type person">E. Dormy</a>.
+            </p>
+
+            <p>
+                In October 2024, I began my PhD, focusing on the transition to turbulence over airplane wings using direct numerical simulations with a spectral/hp element method approach. I am being supervised by 
+                <a href="https://www.imperial.ac.uk/people/s.sherwin" target="_blank" class="type person">S. Sherwin</a> and 
+                <a href="https://www.imperial.ac.uk/people/y.hwang" target="_blank" class="type person">Y. Hwang</a>.
+            </p>
+        </article>
+
+        <section>
+            <img src="/images/personal/victor-ballester-beyond-academia.jpg" alt="Paisatge">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 497 428">
+                    <path d="M142 383C130 392 116 398 100 398 61 398 30 367 30 328 30 290 61 258 100 258 129 258 154 276 164 302L186 279C169 249 137 228 100 228 45 228 0 273 0 328 0 383 45 428 100 428 126 428 149 418 167 401 160 399 153 396 148 390 146 388 144 386 142 383"/>
+                    <path d="M293 229 240 199C264 184 255 189 279 175L278 182C277 195 286 206 298 209 298 209 391 225 394 225 406 225 417 216 419 204 421 190 412 177 398 175L330 164 333 131C337 111 338 104 330 92L321 76C308 56 281 50 261 62L155 129C129 146 116 180 137 205 146 215 227 265 227 265L161 333C149 345 150 364 162 376A30 30 0 00183 384C190 384 198 381 204 375L300 276C313 262 310 239 293 229M405 93C428 78 436 48 421 24 406 1 376-6 352 8 329 23 322 54 336 77 351 101 382 108 405 93"/>
+                    <path d="M397 228C341 228 297 274 297 328 297 383 342 428 397 428 452 428 497 383 497 328 497 273 452 228 397 228M397 397C359 397 327 366 327 327 327 289 358 257 397 257 435 257 467 288 467 327 467 365 436 397 397 397"/>
+                </svg>
+                <h3>Beyond Academia</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 12">
+                    <path d="M 5.55 1.157 A 1.157 1.157 0 0 1 4.392 2.314 A 1.157 1.157 0 0 1 3.236 1.157 A 1.157 1.157 0 0 1 4.392 0 A 1.157 1.157 0 0 1 5.55 1.157 M 0.76 2.753 L 2.205 2.907 L 2.388 2.927 Q 2.524 2.939 2.654 2.907 C 2.558 3.052 2.489 3.217 2.464 3.401 L 2.23 5.131 L 3.245 4.556 L 2.886 3.562 A 1 1 0 0 1 2.934 2.782 Q 2.958 2.769 2.98 2.752 A 0.8 0.8 0 0 0 3.207 2.45 A 0.8 0.8 0 0 0 3.275 2.21 A 0.805 0.805 0 0 0 2.559 1.323 L 0.931 1.15 A 0.806 0.806 0 1 0 0.761 2.753 M 10.803 5.178 A 0.397 0.397 0 0 0 10.247 5.256 L 8.757 7.236 A 0.4 0.4 0 0 0 8.692 7.367 L 8.078 9.537 L 7.137 9.671 A 0.4 0.4 0 0 0 6.997 9.719 L 4.272 11.257 A 0.397 0.397 0 1 0 4.662 11.949 L 7.323 10.447 L 8.446 10.287 A 0.4 0.4 0 0 0 8.772 10.001 L 9.436 7.655 L 10.881 5.735 A 0.397 0.397 0 0 0 10.803 5.178 M 6.34 9.525 L 6.095 7.836 A 0.7 0.7 0 0 0 5.793 7.358 L 4.8 6.695 L 4.452 6.462 L 4.457 6.422 L 4.482 6.239 L 4.278 6.183 A 1 1 0 0 1 3.608 5.563 L 3.381 4.935 L 2.162 5.625 L 2.097 6.103 C 2.084 6.203 2.081 6.536 2.126 6.679 L 2.408 7.586 L 2.788 8.803 L 2.258 10.822 A 0.695 0.695 0 1 0 3.601 11.176 L 4.182 8.964 A 0.7 0.7 0 0 0 4.174 8.58 L 3.924 7.78 L 4.764 8.341 L 4.964 9.724 A 0.695 0.695 0 0 0 6.34 9.524 M 4.38 3.023 A 0.595 0.595 0 1 0 3.26 3.427 L 3.982 5.428 A 0.6 0.6 0 0 0 4.385 5.8 L 6.257 6.315 A 0.594 0.594 0 1 0 6.573 5.167 L 4.998 4.734 Z M 1.705 6.05 L 1.773 5.546 L 0.485 4.016 L 0.295 5.802 A 0.806 0.806 0 0 0 1.011 6.689 L 1.781 6.771 A 1.6 1.6 0 0 1 1.705 6.05 M 0.598 2.96 L 0.544 3.468 L 1.844 5.015 L 2.071 3.347 C 2.081 3.269 2.103 3.197 2.124 3.123 Z"/>
+                </svg>
+            </div>
+            <p>Outside of academia, I enjoy cycling and hiking, which keep me active and allow me to explore nature.</p>
+        </section>
+
+        <section>
+            <p>
+                If you'd like to get in touch, feel free to reach out to me via any of these platforms:
+            </p>
+            
+            <address>
+                <a href="mailto:vb824@ic.ac.uk" class="email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" class="email-icon">
+                        <path d="M 0 2 A 2 2 0 0 1 2 0 H 18 A 2 2 0 0 1 20 2 V 14 A 2 2 0 0 1 18 16 H 2 A 2 2 0 0 1 0 14 Z M 3.5 2 L 10 7.65 L 16.5 2 Z M 18 3.35 L 10.65 9.75 A 1 1 0 0 1 9.35 9.75 L 2 3.35 V 14 H 18 Z"/>
+                    </svg>
+                    <span>Email</span>
+                </a>
+                <a href="https://telegram.me/victorballester" target="_blank" class="telegram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
+                        <path d="M 28 14 A 14 14 0 1 0 0 14 A 14 14 0 1 0 28 14"/>
+                        <path d="M20.987 8.209C21.111 7.403 20.345 6.768 19.629 7.082L5.365 13.345C4.851 13.57 4.889 14.348 5.421 14.518L8.363 15.455C8.925 15.634 9.533 15.541 10.023 15.202L16.655 10.62C16.855 10.482 17.073 10.767 16.902 10.943L12.128 15.865C11.665 16.342 11.757 17.151 12.314 17.501L17.659 20.852C18.259 21.228 19.029 20.851 19.142 20.126Z"/>
+                    </svg>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://wa.me/447584683859" target="_blank" class="whatsapp">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                        <path d="M 29.814 14.301 A 14.87 14.87 0 0 0 15.044 -0.023 H 14.972 A 14.87 14.87 0 0 0 1.912 21.979 L 0.598 29.847 A 0.114 0.114 0 0 0 0.711 29.977 H 0.734 L 8.516 28.246 A 14.9 14.9 0 0 0 14.959 29.711 H 15.384 A 14.864 14.864 0 0 0 29.814 14.301 M 15.31 27.125 H 14.959 A 12.3 12.3 0 0 1 9.294 25.75 L 8.896 25.542 L 3.618 26.789 L 4.592 21.449 L 4.366 21.067 A 12.29 12.29 0 0 1 14.619 2.56 H 14.977 A 12.287 12.287 0 0 1 15.323 27.129 Z"/>
+                        <path d="M 9.79 7.667 A 1.37 1.37 0 0 0 8.812 8.102 C 8.458 8.466 7.467 9.34 7.41 11.177 C 7.353 13.013 8.636 14.83 8.815 15.085 S 11.269 19.307 15.015 20.916 C 17.215 21.864 18.181 22.027 18.806 22.027 C 19.064 22.027 19.259 22 19.462 21.988 C 20.148 21.946 21.697 21.153 22.035 20.29 C 22.372 19.428 22.395 18.674 22.306 18.523 S 21.973 18.263 21.605 18.071 C 21.237 17.878 19.432 16.913 19.093 16.777 A 1.2 1.2 0 0 0 18.693 16.673 A 0.55 0.55 0 0 0 18.248 16.938 C 17.947 17.314 17.255 18.13 17.022 18.365 A 0.55 0.55 0 0 1 16.615 18.555 A 1 1 0 0 1 16.207 18.445 A 9.5 9.5 0 0 1 13.268 16.485 A 11.3 11.3 0 0 1 11.272 13.829 C 11.067 13.449 11.272 13.253 11.459 13.075 S 11.846 12.652 12.039 12.439 Q 12.278 12.165 12.431 11.836 A 0.69 0.69 0 0 0 12.421 11.181 C 12.331 10.991 11.667 9.123 11.355 8.374 C 11.101 7.733 10.8 7.712 10.535 7.692 C 10.319 7.677 10.07 7.67 9.821 7.662 H 9.789"/>
+                    </svg>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://github.com/victorballester7" target="_blank" class="github">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 21.46">
+                        <path d="M 11 0 C 4.923 0 0 4.923 0 11 C 0 15.867 3.149 19.979 7.521 21.436 C 8.071 21.532 8.277 21.203 8.277 20.914 C 8.277 20.652 8.264 19.786 8.264 18.865 C 5.5 19.374 4.785 18.191 4.565 17.573 C 4.441 17.256 3.905 16.28 3.438 16.019 C 3.053 15.812 2.502 15.304 3.424 15.29 C 4.29 15.276 4.909 16.087 5.115 16.418 C 6.105 18.081 7.686 17.614 8.319 17.325 C 8.415 16.61 8.704 16.129 9.02 15.854 C 6.572 15.579 4.015 14.63 4.015 10.422 C 4.015 9.226 4.441 8.236 5.143 7.466 C 5.032 7.191 4.647 6.064 5.253 4.551 C 5.253 4.551 6.174 4.263 8.277 5.679 A 10.2 10.2 0 0 1 11.027 5.308 C 11.963 5.308 12.898 5.431 13.777 5.679 C 15.881 4.249 16.802 4.551 16.802 4.551 C 17.407 6.064 17.023 7.191 16.913 7.466 C 17.614 8.236 18.04 9.213 18.04 10.422 C 18.04 14.644 15.469 15.579 13.021 15.854 C 13.42 16.198 13.764 16.858 13.764 17.889 C 13.764 19.36 13.75 20.543 13.75 20.914 C 13.75 21.203 13.956 21.546 14.506 21.436 C 18.851 19.979 22 15.854 22 11 C 22 4.923 17.078 0 11 0"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/victorballester7" target="_blank" class="linkedin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 382 382">
+                        <path d="M 347.445 0 H 34.555 C 15.471 0 0 15.471 0 34.555 V 347.444 C 0 366.529 15.471 382 34.555 382 H 347.444 C 366.529 382 382 366.529 382 347.444 V 34.555 C 382 15.471 366.529 0 347.445 0 M 118.207 329.844 C 118.207 335.398 113.705 339.9 108.151 339.9 H 65.345 C 59.791 339.9 55.289 335.398 55.289 329.844 V 150.403 C 55.289 144.849 59.791 140.347 65.345 140.347 H 108.151 C 113.705 140.347 118.207 144.849 118.207 150.403 Z M 86.748 123.432 C 64.289 123.432 46.082 105.225 46.082 82.766 S 64.289 42.1 86.748 42.1 S 127.414 60.307 127.414 82.766 S 109.208 123.432 86.748 123.432 M 341.91 330.654 A 9.247 9.247 0 0 1 332.664 339.9 H 286.73 A 9.247 9.247 0 0 1 277.484 330.654 V 246.486 C 277.484 233.93 281.167 191.465 244.671 191.465 C 216.362 191.465 210.62 220.531 209.467 233.575 V 330.654 A 9.246 9.246 0 0 1 200.221 339.9 H 155.795 A 9.247 9.247 0 0 1 146.549 330.654 V 149.593 A 9.247 9.247 0 0 1 155.795 140.347 H 200.221 A 9.247 9.247 0 0 1 209.467 149.593 V 165.248 C 219.964 149.495 235.564 137.336 268.779 137.336 C 342.331 137.336 341.91 206.052 341.91 243.808 Z"/>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </address>
+        </section>
+    </main>
+	<Footer />
+</Layout>

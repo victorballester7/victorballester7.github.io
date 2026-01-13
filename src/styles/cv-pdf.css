@@ -1,0 +1,418 @@
+/* ============================================
+    CV - Víctor Ballester Ribó - A4 PDF
+============================================ */
+@page :first {
+    size: A4;
+    margin-top: 0;
+}
+
+html {
+    font-size: 14.45px !important; /* BLOQUEA el rem, para usar position: fixed; sin descuadrar */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg-light);
+}
+
+/* === WATERMARK IMAGE === */
+body > img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 205mm;
+    height: auto;
+    opacity: 0.05;
+    transform: translate(-50%, -50%) rotate(-67.5deg);
+}
+
+/* ============================================
+    CORTES - Evitar cortes en la impresión
+============================================ */
+@page {
+    background-color: var(--color-bg-light); /* Para que el fondo no sea blanco, en los margenes */
+    margin-top: var(--space-3xl);
+}
+
+section > h2 {
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+article {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* === HEADER === */
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32%;
+    height: 44%;
+    background-image:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><path id='star' fill='white' opacity='0.75' d='M0 2C1 2 2 3 2 4 2 3 3 2 4 2 3 2 2 1 2 0 2 1 1 2 0 2'/></defs><use href='%23star' transform='translate(8 5) scale(0.35)'/><use href='%23star' transform='translate(25 3) scale(0.25)'/><use href='%23star' transform='translate(45 8) scale(0.3)'/><use href='%23star' transform='translate(65 4) scale(0.2)'/><use href='%23star' transform='translate(85 10) scale(0.28)'/><use href='%23star' transform='translate(15 18) scale(0.22)'/><use href='%23star' transform='translate(38 15) scale(0.32)'/><use href='%23star' transform='translate(58 20) scale(0.18)'/><use href='%23star' transform='translate(78 16) scale(0.27)'/><use href='%23star' transform='translate(92 22) scale(0.15)'/><use href='%23star' transform='translate(5 30) scale(0.33)'/><use href='%23star' transform='translate(28 28) scale(0.24)'/><use href='%23star' transform='translate(50 32) scale(0.19)'/><use href='%23star' transform='translate(72 35) scale(0.29)'/><use href='%23star' transform='translate(88 29) scale(0.21)'/><use href='%23star' transform='translate(12 42) scale(0.31)'/><use href='%23star' transform='translate(35 45) scale(0.17)'/><use href='%23star' transform='translate(55 40) scale(0.26)'/><use href='%23star' transform='translate(75 48) scale(0.35)'/><use href='%23star' transform='translate(20 55) scale(0.23)'/><use href='%23star' transform='translate(42 58) scale(0.3)'/><use href='%23star' transform='translate(62 52) scale(0.16)'/><use href='%23star' transform='translate(82 60) scale(0.28)'/><use href='%23star' transform='translate(8 68) scale(0.34)'/><use href='%23star' transform='translate(30 65) scale(0.2)'/><use href='%23star' transform='translate(52 70) scale(0.27)'/><use href='%23star' transform='translate(70 72) scale(0.15)'/><use href='%23star' transform='translate(90 68) scale(0.32)'/><use href='%23star' transform='translate(15 80) scale(0.25)'/><use href='%23star' transform='translate(38 78) scale(0.19)'/><use href='%23star' transform='translate(60 82) scale(0.31)'/><use href='%23star' transform='translate(78 85) scale(0.22)'/><use href='%23star' transform='translate(25 92) scale(0.29)'/><use href='%23star' transform='translate(48 90) scale(0.18)'/><use href='%23star' transform='translate(68 95) scale(0.24)'/><use href='%23star' transform='translate(85 92) scale(0.33)'/></svg>"),
+        linear-gradient(180deg, var(--color-primary-dark), var(--color-gray-800));
+    background-size: cover, cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--space-xl);
+    border-bottom-right-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-xl) var(--color-primary-opacity);
+    z-index: 1;
+}
+
+header img {
+    width: 125px;
+    height: 125px;
+    border-radius: var(--border-radius-full);
+    object-fit: cover;
+    border: var(--border-width-thick) solid var(--color-primary);
+    box-shadow: var(--shadow-xl) var(--color-primary-opacity);
+    margin-bottom: var(--space-lg);
+}
+
+header h1 {
+    color: var(--color-white);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    letter-spacing: var(--letter-spacing-wide);
+    margin-bottom: var(--space-sm);
+}
+
+header h2 {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    text-shadow: 0 0 15px var(--color-primary);
+}
+
+header address {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+header address a {
+    text-decoration: none;
+    color: var(--color-gray-300);
+    font-size: var(--font-size-xs);
+    display: flex;
+    align-items: center;
+}
+
+header address a svg {
+    width: 14px;
+    height: auto;
+    fill: var(--color-primary);
+    vertical-align: middle;
+    margin-right: var(--space-sm);
+}
+
+header p {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-gray-200);
+    text-align: center;
+    line-height: var(--line-height-normal);
+}
+
+/* === Main === */
+main {
+    padding: var(--space-2xl);
+    background-color: var(--color-bg-light);
+    overflow-y: auto;
+}
+
+main section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 0 var(--space-2xl);
+    margin-bottom: var(--space-2xl);
+}
+
+main section h2 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-dark);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    grid-column: 1 / -1; /* Para que el título ocupe todo el ancho */
+    border-bottom: var(--border-width-thick) solid var(--color-primary-dark);
+    padding-bottom: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+/* === Section Especificas === */
+main section:first-child h2,
+main section:first-child > article:nth-of-type(-n+3) {
+    margin-left: calc(32% + var(--space-xl));
+}
+
+main section:nth-of-type(2) h2 {
+    text-align: center;
+}
+
+main section:last-child {
+    margin-bottom: 0;
+}
+
+/* === Articles === */
+main section article {
+    border-left: var(--border-width-xl) solid var(--color-primary);
+    padding-left: var(--space-2xl);
+    margin-bottom: var(--space-3xl);
+}
+
+main section article:last-child {
+    margin-bottom: 0;
+}
+
+main section:first-child > article:nth-of-type(4),
+main section:first-child > article:nth-of-type(5) {
+    margin-top: var(--space-md);
+}
+
+main section:first-child > article:nth-of-type(n+4):last-child:nth-of-type(even) {
+    grid-column: 1 / -1; /* A partir del cuarto article, ocupa todo el ancho siempre que el último article sea par */
+}
+
+main section:first-child > article:nth-of-type(n+4):last-child:nth-of-type(odd) {
+    grid-column: 2 / 2; /* A partir del cuarto article, ocupa solo la segunda columna si es impar */;
+}
+
+main section article:last-child:nth-of-type(odd) {
+    grid-column: 1 / -1; /* Si el último article es impar, ocupa todo el ancho */
+}
+
+/* === Article Especificos === */
+main section:first-child > article:nth-of-type(-n+3) {
+    grid-column: 1 / -1;
+}
+
+/* === Títulos de artículo === */
+main section article h3 {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--space-sm);
+    line-height: var(--line-height-tight);
+}
+
+main section article div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: var(--space-xs);
+}
+
+main section:first-child article div,
+main section:nth-of-type(3) article div,
+main section article:last-child div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main section article div h4 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-600);
+    line-height: var(--line-height-normal);
+}
+
+main section article div time {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-primary-dark);
+    font-style: italic;
+}
+
+main section article div a img,
+main section article div a svg {
+    width: 16px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: var(--space-sm);
+}
+
+main section article a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+}
+
+/* === Listas === */
+main section article ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+main section article ul li {
+    list-style: disclosure-closed;
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-700);
+    line-height: var(--line-height-relaxed);
+    margin-left: var(--space-xl);
+}
+
+main section article ul li::marker {
+    color: var(--color-primary);
+}
+
+main section article ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* === FOOTER === */
+footer {
+    position: absolute;
+    left: -0.25%;
+    bottom: calc(-1109.5px * 1);  /* -1109.Xpx * numero de paginas -1 (X se va retocando) */
+    width: 100.5%;
+    padding: var(--space-lg) var(--space-xl);
+    background-image:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'><defs><path id='star' fill='white' opacity='0.75' d='M0 2C1 2 2 3 2 4 2 3 3 2 4 2 3 2 2 1 2 0 2 1 1 2 0 2'/></defs><use href='%23star' transform='translate(5 3) scale(0.32)'/><use href='%23star' transform='translate(18 2) scale(0.22)'/><use href='%23star' transform='translate(32 5) scale(0.28)'/><use href='%23star' transform='translate(48 3) scale(0.18)'/><use href='%23star' transform='translate(62 6) scale(0.25)'/><use href='%23star' transform='translate(78 4) scale(0.35)'/><use href='%23star' transform='translate(92 5) scale(0.15)'/><use href='%23star' transform='translate(10 12) scale(0.3)'/><use href='%23star' transform='translate(25 10) scale(0.2)'/><use href='%23star' transform='translate(40 14) scale(0.27)'/><use href='%23star' transform='translate(55 11) scale(0.33)'/><use href='%23star' transform='translate(70 13) scale(0.19)'/><use href='%23star' transform='translate(85 15) scale(0.26)'/><use href='%23star' transform='translate(8 20) scale(0.31)'/><use href='%23star' transform='translate(22 22) scale(0.17)'/><use href='%23star' transform='translate(38 19) scale(0.24)'/><use href='%23star' transform='translate(52 23) scale(0.29)'/><use href='%23star' transform='translate(68 21) scale(0.16)'/><use href='%23star' transform='translate(82 24) scale(0.34)'/><use href='%23star' transform='translate(95 22) scale(0.21)'/></svg>"),
+        linear-gradient(180deg, var(--color-gray-800), var(--color-primary-dark));
+    background-size: cover, cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: var(--border-radius-xl);
+    border-top-right-radius: var(--border-radius-xl);
+    color: var(--color-white);
+    box-shadow: 0 -8px 16px var(--color-primary-opacity);
+}
+
+/* Contenedor principal del footer */
+footer > div:first-child {
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-sm);
+}
+
+footer section h3 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-sm);
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    border-bottom: var(--border-width-medium) solid var(--color-primary);
+    padding-bottom: var(--space-xs);
+}
+
+/* Listas del footer */
+footer section:first-of-type ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul { 
+    list-style: none;
+    margin: 0;
+    padding-left: var(--space-lg);
+}
+
+/* Hobbies y Others - con markers */
+footer section:nth-child(2) ul,
+footer section:nth-child(3) ul {
+    list-style: disclosure-closed;
+}
+
+footer section:nth-child(2) ul li::marker,
+footer section:nth-child(3) ul li::marker {
+    color: var(--color-primary);
+}
+
+footer ul li {
+    margin-bottom: var(--space-xs);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-tight);
+    color: var(--color-bg-light);
+}
+
+/* === IDIOMAS - Layout en 2 columnas === */
+footer section:first-child ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xs) var(--space-sm);
+}
+
+footer section:first-child li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--font-size-sm);
+}
+
+footer section:first-child img {
+    width: 16px;
+    height: 12px;
+    object-fit: cover;
+    box-shadow: var(--shadow-sm) var(--color-primary-dark);
+    flex-shrink: 0;
+}
+
+footer section:first-child span {
+    flex: 1;
+    text-align: right;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-primary);
+    background: linear-gradient(
+        to right,
+        var(--color-primary-opacity) var(--level),
+        transparent var(--level)
+    );
+    padding: var(--space-xs);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-xs);
+}
+
+/* === HOBBIES - Layout en 2 columnas === */
+footer section:nth-child(2) ul,
+footer section:nth-child(3) ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xs) var(--space-sm);
+}
+
+/* niveles */
+span[data-level="native"] { --level: 100%; }
+span[data-level="c1"] { --level: 80%; }
+span[data-level="b2"] { --level: 60%; }
+span[data-level="b1"] { --level: 40%; }
+span[data-level="a2"] { --level: 20%; }
+span[data-level="a1"] { --level: 10%; }
+
+/* Footer meta (última actualización) */
+footer > div:last-child {
+    text-align: center;
+}
+
+footer small {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-300);
+    font-weight: var(--font-weight-light);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+footer time {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-medium);
+}

@@ -1,0 +1,185 @@
+---
+import cv from '../content/cv.json';
+
+const buildDate = new Date().toLocaleDateString('en-EN', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+});
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - {cv.personal.name}</title>
+    <meta name="description" content={`CV of ${cv.personal.name}, a PhD student in Aeronautics at Imperial College London.`}>
+    <link rel="stylesheet" href="/styles/variables.css">
+    <link rel="stylesheet" href="/styles/cv-temp.css">
+</head>
+<body>
+    <img src="/images/logos/others/boeing-747.svg" alt="Boeing 747">
+    <header>
+        <img src={cv.personal.photo} alt={cv.personal.name}>
+        <h1>{cv.personal.name}</h1>
+        <h2>{cv.personal.title}</h2>
+        <address>
+            <a href={`mailto:${cv.personal.contact.email}`}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 360">
+                    <path d="M332 201 289 244C271 262 241 262 223 244L180 201 26 356C32 358 38 360 45 360H467C474 360 480 358 486 356ZM467 0H45C38 0 32 2 26 4L191 169C191 169 191 169 191 169A0 0 0 01191 169L244 223C250 229 262 229 268 223L321 169S321 169 321 169C321 169 321 169 321 169L486 4C480 2 474 0 467 0M5 25C2 31 0 38 0 45V315C0 322 2 329 5 335L159 180ZM507 25 353 180 507 335C510 329 512 322 512 315V45C512 38 510 31 507 25"/>
+                </svg> {cv.personal.contact.email}
+            </a>
+            <a href={`tel:${cv.personal.contact.phone}`}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384">
+                    <path d="M353 252C330 252 307 248 285 241 274 237 261 241 254 248L211 280C161 253 130 223 104 173L135 131C144 123 147 111 143 99 136 77 132 54 132 31 132 14 118 0 101 0H31C14 0 0 14 0 31 0 226 158 384 353 384 370 384 384 370 384 353V283C384 266 370 252 353 252"/>
+                </svg> {cv.personal.contact.phone}
+            </a>
+            <a href="https://maps.app.goo.gl/BcZYDM2aGpPrA8MH9" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M256 32C167.67 32 96 96.51 96 176c0 128 160 304 160 304s160-176 160-304c0-79.49-71.67-144-160-144zm0 224a64 64 0 1 1 64-64 64.07 64.07 0 0 1-64 64z"></path>
+                </svg> {cv.personal.contact.location}
+            </a>
+            <a href={`https://telegram.me/${cv.personal.contact.telegram}`} target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14">
+                    <path d="M15.987 1.209C16.111.403 15.345-.232 14.629.082L.365 6.345C-.149 6.57-.111 7.348.421 7.518L3.363 8.455C3.925 8.634 4.533 8.541 5.023 8.202L11.655 3.62C11.855 3.482 12.073 3.767 11.902 3.943L7.128 8.865C6.665 9.342 6.757 10.151 7.314 10.501L12.659 13.852C13.259 14.228 14.029 13.851 14.142 13.126Z"/>
+                </svg> {cv.personal.contact.telegram}
+            </a>
+            <a href={`https://www.linkedin.com/in/${cv.personal.contact.linkedin}`} target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 382 382" class="linkedin-icon">
+                    <path d="M 347.445 0 H 34.555 C 15.471 0 0 15.471 0 34.555 V 347.444 C 0 366.529 15.471 382 34.555 382 H 347.444 C 366.529 382 382 366.529 382 347.444 V 34.555 C 382 15.471 366.529 0 347.445 0 M 118.207 329.844 C 118.207 335.398 113.705 339.9 108.151 339.9 H 65.345 C 59.791 339.9 55.289 335.398 55.289 329.844 V 150.403 C 55.289 144.849 59.791 140.347 65.345 140.347 H 108.151 C 113.705 140.347 118.207 144.849 118.207 150.403 Z M 86.748 123.432 C 64.289 123.432 46.082 105.225 46.082 82.766 S 64.289 42.1 86.748 42.1 S 127.414 60.307 127.414 82.766 S 109.208 123.432 86.748 123.432 M 341.91 330.654 A 9.247 9.247 0 0 1 332.664 339.9 H 286.73 A 9.247 9.247 0 0 1 277.484 330.654 V 246.486 C 277.484 233.93 281.167 191.465 244.671 191.465 C 216.362 191.465 210.62 220.531 209.467 233.575 V 330.654 A 9.246 9.246 0 0 1 200.221 339.9 H 155.795 A 9.247 9.247 0 0 1 146.549 330.654 V 149.593 A 9.247 9.247 0 0 1 155.795 140.347 H 200.221 A 9.247 9.247 0 0 1 209.467 149.593 V 165.248 C 219.964 149.495 235.564 137.336 268.779 137.336 C 342.331 137.336 341.91 206.052 341.91 243.808 Z"/>
+                </svg> {cv.personal.contact.linkedin}
+            </a>
+            <a href={`https://github.com/${cv.personal.contact.github}`} target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 21.46">
+                    <path d="M 11 0 C 4.923 0 0 4.923 0 11 C 0 15.867 3.149 19.979 7.521 21.436 C 8.071 21.532 8.277 21.203 8.277 20.914 C 8.277 20.652 8.264 19.786 8.264 18.865 C 5.5 19.374 4.785 18.191 4.565 17.573 C 4.441 17.256 3.905 16.28 3.438 16.019 C 3.053 15.812 2.502 15.304 3.424 15.29 C 4.29 15.276 4.909 16.087 5.115 16.418 C 6.105 18.081 7.686 17.614 8.319 17.325 C 8.415 16.61 8.704 16.129 9.02 15.854 C 6.572 15.579 4.015 14.63 4.015 10.422 C 4.015 9.226 4.441 8.236 5.143 7.466 C 5.032 7.191 4.647 6.064 5.253 4.551 C 5.253 4.551 6.174 4.263 8.277 5.679 A 10.2 10.2 0 0 1 11.027 5.308 C 11.963 5.308 12.898 5.431 13.777 5.679 C 15.881 4.249 16.802 4.551 16.802 4.551 C 17.407 6.064 17.023 7.191 16.913 7.466 C 17.614 8.236 18.04 9.213 18.04 10.422 C 18.04 14.644 15.469 15.579 13.021 15.854 C 13.42 16.198 13.764 16.858 13.764 17.889 C 13.764 19.36 13.75 20.543 13.75 20.914 C 13.75 21.203 13.956 21.546 14.506 21.436 C 18.851 19.979 22 15.854 22 11 C 22 4.923 17.078 0 11 0"/>
+                </svg> {cv.personal.contact.github}
+            </a>
+        </address>
+        
+        <p>{cv.personal.description}</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Education</h2>
+            {cv.education.map(edu => (
+                <article>
+                    <h3>{edu.title}</h3>
+                    <div>
+                        <h4>{edu.institution} | {edu.location}</h4>
+                        <time>{edu.period}</time>
+                    </div>
+                    <ul>
+                        {edu.description.map(item => (
+                            <li set:html={item} />
+                        ))}
+                    </ul>
+                </article>
+            ))}
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            {cv.experience.map(exp => (
+                <article>
+                    <h3>{exp.title}</h3>
+                    <div>
+                        <h4>{exp.institution} | {exp.location}</h4>
+                        <time>{exp.period}</time>
+                    </div>
+                    <ul>
+                        {exp.description.map(item => (
+                            <li set:html={item} />
+                        ))}
+                    </ul>
+                </article>
+            ))}
+        </section>
+
+        <section>
+            <h2>Research Projects</h2>
+            {cv.research_projects.map(proj => (
+                <article>
+                    <h3>{proj.title}</h3>
+                    <div>
+                        <h4>{proj.location}</h4>
+                        {(proj.report || proj.code) && (
+                            <div>
+                                {proj.report && (
+                                    <a href={proj.report} target="_blank">
+                                        <img src="/images/logos/others/pdf.svg" alt="PDF Icon">
+                                    </a>
+                                )}
+                                {proj.code && (
+                                    <a href={proj.code} target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 21.46"><path d="M 11 0 C 4.923 0 0 4.923 0 11 C 0 15.867 3.149 19.979 7.521 21.436 C 8.071 21.532 8.277 21.203 8.277 20.914 C 8.277 20.652 8.264 19.786 8.264 18.865 C 5.5 19.374 4.785 18.191 4.565 17.573 C 4.441 17.256 3.905 16.28 3.438 16.019 C 3.053 15.812 2.502 15.304 3.424 15.29 C 4.29 15.276 4.909 16.087 5.115 16.418 C 6.105 18.081 7.686 17.614 8.319 17.325 C 8.415 16.61 8.704 16.129 9.02 15.854 C 6.572 15.579 4.015 14.63 4.015 10.422 C 4.015 9.226 4.441 8.236 5.143 7.466 C 5.032 7.191 4.647 6.064 5.253 4.551 C 5.253 4.551 6.174 4.263 8.277 5.679 A 10.2 10.2 0 0 1 11.027 5.308 C 11.963 5.308 12.898 5.431 13.777 5.679 C 15.881 4.249 16.802 4.551 16.802 4.551 C 17.407 6.064 17.023 7.191 16.913 7.466 C 17.614 8.236 18.04 9.213 18.04 10.422 C 18.04 14.644 15.469 15.579 13.021 15.854 C 13.42 16.198 13.764 16.858 13.764 17.889 C 13.764 19.36 13.75 20.543 13.75 20.914 C 13.75 21.203 13.956 21.546 14.506 21.436 C 18.851 19.979 22 15.854 22 11 C 22 4.923 17.078 0 11 0"/></svg>
+                                    </a>
+                                )}
+                            </div>
+                        )}
+                        <time>{proj.period}</time>
+                    </div>
+                    <ul>
+                        {proj.description.map(item => (
+                            <li set:html={item} />
+                        ))}
+                    </ul>
+                </article>
+            ))}
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <section>
+                <h3>Languages</h3>
+                <ul>
+                    <li>
+                        <img src="/images/logos/flags/catalonia.svg" alt="Catalan Flag">
+                        <span data-level={cv.personal.languages.catalan.toLowerCase()}>{cv.personal.languages.catalan}</span>
+                    </li>
+                    <li>
+                        <img src="/images/logos/flags/spain.png" alt="Spanish Flag">
+                        <span data-level={cv.personal.languages.spanish.toLowerCase()}>{cv.personal.languages.spanish}</span>
+                    </li>
+                    <li>
+                        <img src="/images/logos/flags/united-kingdom.svg" alt="English Flag">
+                        <span data-level={cv.personal.languages.english.toLowerCase()}>{cv.personal.languages.english}</span>
+                    </li>
+                    <li>
+                        <img src="/images/logos/flags/france.svg" alt="French Flag">
+                        <span data-level={cv.personal.languages.french.toLowerCase()}>{cv.personal.languages.french}</span>
+                    </li>
+                    <li>
+                        <img src="/images/logos/flags/germany.svg" alt="German Flag">
+                        <span data-level={cv.personal.languages.german.toLowerCase()}>{cv.personal.languages.german}</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Hobbies & Interests</h3>
+                <ul>
+                    {cv.personal.hobbies.map(hobby => (
+                        <li>{hobby}</li>
+                    ))}
+                </ul>
+            </section>
+
+            <section>
+                <h3>Additional Information</h3>
+                <ul>
+                    {cv.personal.others.map(item => (
+                        <li>{item}</li>
+                    ))}
+                </ul>
+            </section>
+        </div>
+
+        <div>
+            <small>Last updated: <time datetime={new Date().toISOString()}>{buildDate}</time></small>
+        </div>
+    </footer>
+</body>
+</html>
