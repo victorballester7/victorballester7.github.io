@@ -163,10 +163,6 @@ main section:first-child > article:nth-of-type(-n+3) {
     margin-left: calc(32% + var(--space-xl));
 }
 
-main section:nth-of-type(2) h2 {
-    text-align: center;
-}
-
 main section:last-child {
     margin-bottom: 0;
 }

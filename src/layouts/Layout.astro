@@ -1,4 +1,6 @@
 ---
+import { ClientRouter } from 'astro:transitions';
+
 import '../styles/variables.css';
 import '../styles/components/header.css';
 import '../styles/components/footer.css';
@@ -14,6 +16,7 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<link rel="icon" type="image/x-icon" href="/images/logos/others/boeing-747.ico">
+		<ClientRouter />
 	</head>
 	<body>
 		<slot />
