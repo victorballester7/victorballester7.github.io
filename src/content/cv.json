@@ -6,7 +6,7 @@
     "description": "I am a PhD student in the Department of Astronautics at Imperial College of London. I graduated in 2023 in Mathematics at Autonomous University of Barcelona and next year I moved to Paris to pursue a master degree at Dauphine-PSL University in Applied and Theoretical Mathematics. My main interests are in the field of Computational Mathematics and PDEs. Specifically, I am particularly interested in the application of Mathematics to Fluid Dynamics.",
     "contact": {
       "email": "vb824@ic.ac.uk",
-      "phone": "+44 7584 683859",
+      "phone": "+44 7584683859",
       "location": "London, UK",
       "telegram": "victorballester",
       "linkedin": "victorballester7",
@@ -19,7 +19,7 @@
       "french": "B2",
       "german": "B1"
     },
-    "hobbies": ["Cycling", "Hiking", "Physics", "Engineering", "Traveling"],
+    "hobbies": ["Cycling", "Hiking", "Physics", "Engineering", "Traveling", "Racing"],
     "others": ["Driving License B"]
   },
   "education": [
@@ -53,22 +53,40 @@
         "GPA: 9.42 / 10.00",
         "Ranked #1 in my graduating class.",
         "Honors: 186 / 240 ETCS",
-        "Final bachelor's project (supervised by <a href='https://www.gsd.uab.es/people?controller=member&view=member&id=9&slug=josep-maria' target='_blank'>J.M. Mondelo</a>): Numerical propagation of trajectories of Earth-orbiting spacecraft (grade: 10.00 / 10.00 with honors)."
+        "Final bachelor's project (supervised by <a href='https://www.gsd.uab.es/people?controller=member&view=member&id=9&slug=josep-maria' target='_blank'>J.M. Mondelo</a>): Numerical propagation of trajectories of Earth-orbiting spacecraft."
       ]
     }
   ],
   "experience": [
     {
-      "title": "Imperial Formula Racing",
-      "institution": "by Imperial College London",
+      "title": "Student Mentor",
+      "institution": "Imperial Maths School",
+      "location": "London, UK",
+      "period": "October 2025 - Present",
+      "description": [
+        "I mentored high school students on a numerical linear algebra research project comparing how the computational efficiency of different solvers scales with matrix size and sparsity for dense and sparse systems."
+      ]
+    },
+    {
+      "title": "Graduate Teaching Assistant",
+      "institution": "Imperial College London",
       "location": "London, UK",
       "period": "October 2024 - Present",
+      "description": [
+        "Assisting in the teaching of the course <em>Mathematics 1</em>, <em>Mathematics 2</em> and <em>Applications of CFD</em> for undergraduate and master's students."
+      ]
+    },
+    {
+      "title": "Imperial Formula Racing",
+      "institution": "Imperial College London",
+      "location": "London, UK",
+      "period": "October 2024 - May 2025",
       "description": [
         "Member of the Aerodynamics team for the Imperial Formula Racing team, competing in the Formula Student competition."
       ]
     },
     {
-      "title": "NMK Undergraduate and Graduate Summer Camp",
+      "title": "NMK Graduate Summer Camp",
       "institution": "Nesin Mathematics Village",
       "location": "Selçuk, Turkey",
       "period": "July 14 - July 28, 2024",
@@ -83,48 +101,95 @@
       "period": "July 03 - July 28, 2023",
       "description": [
         "Attendance to minicourses on Introduction to Research, from the fields of Algebraic Topology and Number Theory to Applied Mathematics and Discrete Mathematics.",
-        "Worked on a research project (supervised by <a href='https://web.mat.upc.edu/jezabel.curbelo/' target='_blank'>Jezabel Curbelo</a> and <a href='https://web.mat.upc.edu/jezabel.curbelo/' target='_blank'>Álvaro Meseguer</a>): From chaotic dynamical systems to fluid turbulence."
+        "Worked on a research project (supervised by <a href='https://web.mat.upc.edu/jezabel.curbelo/' target='_blank'>Jezabel Curbelo</a> and <a href='https://df.upc.edu/en/instabilities/people/alvaro.meseguer' target='_blank'>Álvaro Meseguer</a>): From chaotic dynamical systems to fluid turbulence."
       ]
     }
   ],
   "research_projects": [
     {
-      "title": "Imperial Formula Racing",
-      "location": "London, UK",
-      "period": "October 2024 - Present",
+      "title": "2D Turbulence Spreading",
+      "location": "Paris, France",
+      "period": "February 2024 - July 2024",
       "report": "https://github.com/victorballester7/final-master-thesis/blob/main/latex/main.pdf",
-      "code": "https://www.math.ens.psl.eu/~dormy/",
+      "code": "https://github.com/victorballester7/final-master-thesis",
       "description": [
-        "Simulation of 2D Navier-Stokes equations with a pseudo-spectral method in order to study the spreading of turbulence in a 2D fluid.",
-        "Final Master's thesis of the Applied Mathematics's degree at Paris-Dauphine University",
-        "Grade: 18.00 / 20.00",
-        "Advised by <a href='https://www.phys.ens.fr/~alexakis/' target='_blank'>Alexandros Alexakis</a> and <a href='https://www.math.ens.psl.eu/~dormy/' target='_blank'>Emmanuel Dormy</a>."
+        "Study of the 2D turbulence propagation after locally injected turbulence is applied in the center of the domain."
       ]
     },
     {
-      "title": "Imperial Formula Racing 3333",
-      "location": "London, UK",
-      "period": "October 2024 - Present",
-      "report": "https://github.com/victorballester7/final-master-thesis/blob/main/latex/main.pdf",
-      "code": "https://www.math.ens.psl.eu/~dormy/",
+      "title": "Chaotic states of the 2D Kuramoto-Sivashinsky equation",
+      "location": "Paris, France",
+      "period": "November 2023 - January 2024",
+      "report": "https://github.com/victorballester7/2D-kuramoto-sivashinsky/releases/latest/download/main.pdf",
+      "code": "https://github.com/victorballester7/2D-kuramoto-sivashinsky",
       "description": [
-        "Simulation of 2D Navier-Stokes equations with a pseudo-spectral method in order to study the spreading of turbulence in a 2D fluid.",
-        "Final Master's thesis of the Applied Mathematics's degree at Paris-Dauphine University",
-        "Grade: 18.00 / 20.00",
-        "Advised by <a href='https://www.phys.ens.fr/~alexakis/' target='_blank'>Alexandros Alexakis</a> and <a href='https://www.math.ens.psl.eu/~dormy/' target='_blank'>Emmanuel Dormy</a>."
+        "Dynamical systems study of the instabilities and chaotic states of the 2D Kuramoto-Sivashinsky equation."
       ]
     },
     {
-      "title": "Imperial Formula Racing",
+      "title": "Numerical propagation of trajectories of Earth-orbiting spacecraft",
       "location": "London, UK",
-      "period": "October 2024 - Present",
-      "report": "https://github.com/victorballester7/final-master-thesis/blob/main/latex/main.pdf",
-      "code": "https://www.math.ens.psl.eu/~dormy/",
+      "period": "January 2023 - July 2023",
+      "report": "https://github.com/victorballester7/final-bachelor-thesis/blob/main/latex/main.pdf",
+      "code": "https://github.com/victorballester7/final-bachelor-thesis",
       "description": [
-        "Simulation of 2D Navier-Stokes equations with a pseudo-spectral method in order to study the spreading of turbulence in a 2D fluid.",
-        "Final Master's thesis of the Applied Mathematics's degree at Paris-Dauphine University",
-        "Grade: 18.00 / 20.00",
-        "Advised by <a href='https://www.phys.ens.fr/~alexakis/' target='_blank'>Alexandros Alexakis</a> and <a href='https://www.math.ens.psl.eu/~dormy/' target='_blank'>Emmanuel Dormy</a>."
+        "Reconstruction of orbits of satellites from real initial data when considering the Earth a non-uniform spherical distribution of mass and other minor perturbations."
+      ]
+    }
+  ],
+  "awards": [  
+    {
+      "title": "PhD Scholarship",
+      "institution": "Imperial College London and The Boeing Company",
+      "location": "London, UK",
+      "period": "October 2024",
+      "description": [
+        "Full scholarship covering tuition fees and providing a stipend of around £20&hairsp;000 per year for the PhD in Aeronautics at Imperial College London."
+      ]
+    },
+    {
+      "title": "Extraordinary Bachelor's Degree Award",
+      "institution": "Autonomous University of Barcelona",
+      "location": "Cerdanyola, Spain",
+      "period": "November 2023",
+      "description": [
+        "Awarded to the student with the best academic record in the Bachelor's Degree in Mathematics at Autonomous University of Barcelona for the graduating class 2019-2023."
+      ]
+    },
+    {
+      "title": "PGSM Scholarship",
+      "institution": "Fondation Sciences Mathématiques de Paris",
+      "location": "Paris, France",
+      "period": "Abril 2023",
+      "description": [
+        "Scholarship that covered tuition fees and provideed a monthly stipend of 1100€ for the M2 Applied and Theoretical Mathematics program at Dauphine-PSL University."
+      ]
+    },
+    {
+      "title": "Second-best spanish individual in the Simon Marais Mathematics Competition",
+      "institution": "Simon Marais Mathematics Competition",
+      "location": "Online",
+      "period": "November 2022",
+      "description": [
+        "Second best qualified Spanish individual and top quartile on the west division of the 2022 Simon Marais Mathematics Competition."
+      ]
+    },
+    {
+      "title": "Best spanish pair in the Simon Marais Mathematics Competition",
+      "institution": "Simon Marais Mathematics Competition",
+      "location": "Online",
+      "period": "November 2021",
+      "description": [
+        "Best qualified Spanish pair on the west division of the 2021 Simon Marais Mathematics Competition, jointly with <a href='https://github.com/misaelmalqui' target='_blank'>Misael Malqui</a>."
+      ]
+    },
+    {
+      "title": "Silver medal at XXX Spanish Physics Olympiad",
+      "institution": "Royal Spanish Society of Physics",
+      "location": "Salamanca, Spain",
+      "period": "April 2019",
+      "description": [
+        "Awarded the silver medal at the national finals of the Spanish Physics Olympiad held in Salamanca."
       ]
     }
   ]

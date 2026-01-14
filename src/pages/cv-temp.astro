@@ -128,6 +128,24 @@ const buildDate = new Date().toLocaleDateString('en-EN', {
                 </article>
             ))}
         </section>
+
+        <section>
+            <h2>Awards and Honors</h2>
+            {cv.awards.map(awa => (
+                <article>
+                    <h3>{awa.title}</h3>
+                    <div>
+                        <h4>{awa.institution} | {awa.location}</h4>
+                        <time>{awa.period}</time>
+                    </div>
+                    <ul>
+                        {awa.description.map(item => (
+                            <li set:html={item} />
+                        ))}
+                    </ul>
+                </article>
+            ))}
+        </section>
     </main>
 
     <footer>
