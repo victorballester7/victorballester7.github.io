@@ -414,6 +414,24 @@ main section:nth-of-type(3) address a.telegram:hover svg path:last-child { fill:
 main section:nth-of-type(3) address a:hover svg  {fill: var(--color-white); }
 
 
+/* === ABOUT ARTICLE === */
+main section:nth-of-type(4) {
+    background: linear-gradient(180deg, var(--color-black) 0%, var(--color-tertiary-opacity) 100%);
+    border-radius: var(--border-radius-2xl);
+    padding: var(--space-5xl);
+    box-shadow: var(--shadow-sm) var(--color-primary-opacity);
+    overflow: hidden;
+}
+
+main section:nth-of-type(4) {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--space-2xl);
+    text-align: justify;
+    color: var(--color-gray-200);
+}
+
+
 @media (max-width: 768px) {
     /* === PRESENTATION === */
     main section:first-of-type {
@@ -488,7 +506,7 @@ main section:nth-of-type(3) address a:hover svg  {fill: var(--color-white); }
         font-size: var(--font-size-base);
     }
 
-    main article p {
+    main article p, main section:nth-of-type(2) p, main section:nth-of-type(3) p, main section:nth-of-type(4) p {
         font-size: var(--font-size-sm);
     }
 
@@ -516,14 +534,6 @@ main section:nth-of-type(3) address a:hover svg  {fill: var(--color-white); }
         font-size: var(--font-size-xl);
     }
 
-    main section:nth-of-type(2) p {
-        font-size: var(--font-size-sm);
-    }
-
-    main section:nth-of-type(3) p {
-        font-size: var(--font-size-sm);
-    }
-
     main section:nth-of-type(3) address a {
         font-size: var(--font-size-base);
         padding: var(--space-lg);
@@ -535,20 +545,4 @@ main section:nth-of-type(3) address a:hover svg  {fill: var(--color-white); }
     }
 }
 
-/* === ABOUT ARTICLE === */
-main section:nth-of-type(4) {
-    background: linear-gradient(180deg, var(--color-black) 0%, var(--color-primary-opacity) 100%);
-    border-radius: var(--border-radius-2xl);
-    padding: var(--space-5xl);
-    box-shadow: var(--shadow-sm) var(--color-primary-opacity);
-    overflow: hidden;
-}
-
-main section:nth-of-type(4) {
-    font-size: var(--font-size-md);
-    line-height: var(--line-height-relaxed);
-    margin-bottom: var(--space-2xl);
-    text-align: justify;
-    color: var(--color-gray-200);
-}
 
