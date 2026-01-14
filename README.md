@@ -49,7 +49,7 @@ npm install
 Generate a production-ready static build:
 
 ```bash
-npm run build && node scripts/generate-cv-pdf.js
+npm run build
 ```
 This will create a `dist/` directory with the built site.
 
@@ -61,7 +61,7 @@ Start the local development server:
 npm run preview
 ```
 
-Astro will start a local server, usually at `http://localhost:3000`. Open it in your browser to see the site with hot reloading enabled.
+Astro will start a local server, usually at `http://localhost:4321`. Open it in your browser to see the site with hot reloading enabled.
 
 
 
