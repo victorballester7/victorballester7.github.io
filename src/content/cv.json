@@ -25,7 +25,7 @@
   "education": [
     {
       "title": "PhD in Aeronautics",
-      "institution": "Imperial College of London",
+      "institution": "Imperial College London",
       "location": "London, UK",
       "period": "October 2024 - Present",
       "description": [
@@ -135,6 +135,22 @@
       "description": [
         "Reconstruction of orbits of satellites from real initial data when considering the Earth a non-uniform spherical distribution of mass and other minor perturbations."
       ]
+    }
+  ],
+  "talks": [
+    {
+      "title": "Flow transition over surface gaps in 2D incompressible laminar boundary layers",
+      "event": "16th ERCOFTAC SIG 33 Workshop",
+      "location": "Cagliari, Italy",
+      "period": "July 2025",
+      "slides": "https://github.com/victorballester7/phd/blob/main/latex/slidesFormalPresentations/202507_sardinia/main.pdf"
+    },
+    {
+      "title": "Flow transition over surface gaps in 2D incompressible laminar boundary layers",
+      "event": "UK Fluids Conference 2025",
+      "location": "Liverpool, UK",
+      "period": "September 2025",
+      "slides": "https://github.com/victorballester7/phd/blob/main/latex/slidesFormalPresentations/202509_liverpool/main.pdf"
     }
   ],
   "awards": [  

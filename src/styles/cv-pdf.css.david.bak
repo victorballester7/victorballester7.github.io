@@ -139,6 +139,9 @@ main {
 }
 
 main section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 0 var(--space-2xl);
     margin-bottom: var(--space-2xl);
 }
 
@@ -148,6 +151,7 @@ main section h2 {
     color: var(--color-primary-dark);
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-wide);
+    grid-column: 1 / -1; /* Para que el título ocupe todo el ancho */
     border-bottom: var(--border-width-thick) solid var(--color-primary-dark);
     padding-bottom: var(--space-sm);
     margin-bottom: var(--space-lg);
@@ -159,45 +163,69 @@ main section:first-child > article:nth-of-type(-n+3) {
     margin-left: calc(32% + var(--space-xl));
 }
 
-/* Temporary */
-main section:nth-child(2){
-    margin-top: 8rem;
-}
-
 main section:last-child {
     margin-bottom: 0;
 }
 
 /* === Articles === */
 main section article {
-    border-left: var(--border-width-thick) solid var(--color-primary);
-    padding-left: var(--space-lg);
-    margin-bottom: var(--space-sm);
+    border-left: var(--border-width-xl) solid var(--color-primary);
+    padding-left: var(--space-2xl);
+    margin-bottom: var(--space-3xl);
 }
 
 main section article:last-child {
     margin-bottom: 0;
 }
 
+main section:first-child > article:nth-of-type(4),
+main section:first-child > article:nth-of-type(5) {
+    margin-top: var(--space-md);
+}
+
+main section:first-child > article:nth-of-type(n+4):last-child:nth-of-type(even) {
+    grid-column: 1 / -1; /* A partir del cuarto article, ocupa todo el ancho siempre que el último article sea par */
+}
+
+main section:first-child > article:nth-of-type(n+4):last-child:nth-of-type(odd) {
+    grid-column: 2 / 2; /* A partir del cuarto article, ocupa solo la segunda columna si es impar */;
+}
+
+main section article:last-child:nth-of-type(odd) {
+    grid-column: 1 / -1; /* Si el último article es impar, ocupa todo el ancho */
+}
+
+/* === Article Especificos === */
+main section:first-child > article:nth-of-type(-n+3) {
+    grid-column: 1 / -1;
+}
+
 /* === Títulos de artículo === */
 main section article h3 {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-base);
     font-weight: var(--font-weight-bold);
     color: var(--color-gray-900);
-    /* margin-bottom: var(--space-sm); */
+    margin-bottom: var(--space-sm);
     line-height: var(--line-height-tight);
 }
 
 main section article div {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: var(--space-xs);
+}
+
+main section:first-child article div,
+main section:nth-of-type(3) article div,
+main section article:last-child div {
     flex-direction: row;
-    align-items: center;
-    /* margin-bottom: var(--space-xs); */
     justify-content: space-between;
+    align-items: center;
 }
 
 main section article div h4 {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
     font-weight: var(--font-weight-semibold);
     color: var(--color-gray-600);
     line-height: var(--line-height-normal);
@@ -212,7 +240,7 @@ main section article div time {
 
 main section article div a img,
 main section article div a svg {
-    width: 15px;
+    width: 16px;
     height: auto;
     vertical-align: middle;
     margin-left: var(--space-sm);
@@ -246,9 +274,7 @@ main section article ul li:last-child {
     margin-bottom: 0;
 }
 
-/******************/
 /* === FOOTER === */
-/******************/
 footer {
     position: absolute;
     left: -0.25%;
