@@ -3,7 +3,7 @@
     "photo": "/images/personal/victor-ballester.jpg",
     "name": "Víctor Ballester Ribó",
     "title": "PhD Student in Aeronautics",
-    "description": "I am a PhD student in the Department of Astronautics at Imperial College of London. I graduated in 2023 in Mathematics at Autonomous University of Barcelona and next year I moved to Paris to pursue a master degree at Dauphine-PSL University in Applied and Theoretical Mathematics. My main interests are in the field of Computational Mathematics and PDEs. Specifically, I am particularly interested in the application of Mathematics to Fluid Dynamics.",
+    "description": "I am a PhD student in the Department of Aeronautics at Imperial College of London. I graduated in 2023 in Mathematics at Autonomous University of Barcelona and next year I moved to Paris to pursue a master degree at Dauphine-PSL University in Applied and Theoretical Mathematics. My main interests are in the field of Computational Mathematics and PDEs. Specifically, I am particularly interested in the application of Mathematics to Fluid Dynamics.",
     "contact": {
       "email": "vb824@ic.ac.uk",
       "phone": "+447584683859",
@@ -128,7 +128,7 @@
     },
     {
       "title": "Numerical propagation of trajectories of Earth-orbiting spacecraft",
-      "location": "London, UK",
+      "location": "Barcelona, Spain",
       "period": "January 2023 - July 2023",
       "report": "https://github.com/victorballester7/final-bachelor-thesis/blob/main/latex/main.pdf",
       "code": "https://github.com/victorballester7/final-bachelor-thesis",
