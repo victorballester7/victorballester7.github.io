@@ -82,7 +82,7 @@
       "location": "London, UK",
       "period": "October 2024 - May 2025",
       "description": [
-        "Member of the Aerodynamics team for the Imperial Formula Racing team, competing in the Formula Student competition."
+        "Member of the Aerodynamics and Simulation team for the Imperial Formula Racing team, competing in the Formula Student competition."
       ]
     },
     {
@@ -113,7 +113,8 @@
       "report": "https://github.com/victorballester7/final-master-thesis/blob/main/latex/main.pdf",
       "code": "https://github.com/victorballester7/final-master-thesis",
       "description": [
-        "Study of the 2D turbulence propagation after locally injected turbulence is applied in the center of the domain."
+        "Study of the 2D turbulence propagation after locally injected turbulence is applied in the center of the domain.",
+        "Supervised by <a href='https://www.phys.ens.fr/~alexakis/' target='_blank'>Alexandros Alexakis</a> and <a href='https://www.math.ens.psl.eu/~dormy/' target='_blank'>Emmanuel Dormy</a>."
       ]
     },
     {
@@ -123,7 +124,8 @@
       "report": "https://github.com/victorballester7/2D-kuramoto-sivashinsky/releases/latest/download/main.pdf",
       "code": "https://github.com/victorballester7/2D-kuramoto-sivashinsky",
       "description": [
-        "Dynamical systems study of the instabilities and chaotic states of the 2D Kuramoto-Sivashinsky equation."
+        "Dynamical systems study of the instabilities and chaotic states of the 2D Kuramoto-Sivashinsky equation.",
+        "Supervised by <a href='https://blog.espci.fr/laurette/' target='_blank'>Laurette Tuckerman</a>."
       ]
     },
     {
@@ -133,17 +135,18 @@
       "report": "https://github.com/victorballester7/final-bachelor-thesis/blob/main/latex/main.pdf",
       "code": "https://github.com/victorballester7/final-bachelor-thesis",
       "description": [
-        "Reconstruction of orbits of satellites from real initial data when considering the Earth a non-uniform spherical distribution of mass and other minor perturbations."
+        "Reconstruction of orbits of satellites from real initial data when considering the Earth a non-uniform spherical distribution of mass and other minor perturbations.",
+        "Supervised by <a href='https://www.gsd.uab.es/people?controller=member&view=member&id=9&slug=josep-maria' target='_blank'>J.M. Mondelo</a>."
       ]
     }
   ],
   "talks": [
     {
-      "title": "Flow transition over surface gaps in 2D incompressible laminar boundary layers",
-      "event": "16th ERCOFTAC SIG 33 Workshop",
-      "location": "Cagliari, Italy",
-      "period": "July 2025",
-      "slides": "https://github.com/victorballester7/phd/blob/main/latex/slidesFormalPresentations/202507_sardinia/main.pdf"
+      "title": "Introduction to Nektar++ framework",
+      "event": "UKACM & GACM Autumn School 2025",
+      "location": "Online",
+      "period": "September 2025",
+      "slides": ""
     },
     {
       "title": "Flow transition over surface gaps in 2D incompressible laminar boundary layers",
@@ -151,6 +154,13 @@
       "location": "Liverpool, UK",
       "period": "September 2025",
       "slides": "https://github.com/victorballester7/phd/blob/main/latex/slidesFormalPresentations/202509_liverpool/main.pdf"
+    },
+    {
+      "title": "Flow transition over surface gaps in 2D incompressible laminar boundary layers",
+      "event": "16th ERCOFTAC SIG 33 Workshop",
+      "location": "Cagliari, Italy",
+      "period": "July 2025",
+      "slides": "https://github.com/victorballester7/phd/blob/main/latex/slidesFormalPresentations/202507_sardinia/main.pdf"
     }
   ],
   "awards": [  
