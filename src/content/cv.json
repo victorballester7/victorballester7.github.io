@@ -142,6 +142,13 @@
   ],
   "talks": [
     {
+      "title": "IMEX Velocity correction scheme for incompressible Navier-Stokes equations",
+      "event": "Lecture at the Department of Aeronautics, Imperial College London",
+      "location": "London, UK",
+      "period": "February 2026",
+      "slides": ""
+    },
+    {
       "title": "Introduction to Nektar++ framework",
       "event": "UKACM & GACM Autumn School 2025",
       "location": "Online",
