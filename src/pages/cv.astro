@@ -1,0 +1,183 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+import cv from '../content/cv.json';
+import { appIcons } from '../data/app-icons';
+import '../styles/cv.css';
+
+const contactLinks = [
+    { label: 'Email', href: `mailto:${cv.personal.contact.email}`, icon: appIcons.email, className: 'email' },
+    { label: 'Telegram', href: `https://telegram.me/${cv.personal.contact.telegram}`, icon: appIcons.telegram, className: 'telegram' },
+    { label: 'WhatsApp', href: `https://wa.me/${cv.personal.contact.phone.replace('+', '')}`, icon: appIcons.whatsapp, className: 'whatsapp' },
+    { label: 'GitHub', href: `https://github.com/${cv.personal.contact.github}`, icon: appIcons.github, className: 'github' }
+];
+
+const languages = [
+    { name: 'Catalan', level: cv.personal.languages.catalan, flag: '/images/logos/flags/catalonia.svg' },
+    { name: 'Spanish', level: cv.personal.languages.spanish, flag: '/images/logos/flags/spain.png' },
+    { name: 'English', level: cv.personal.languages.english, flag: '/images/logos/flags/united-kingdom.svg' },
+    { name: 'French', level: cv.personal.languages.french, flag: '/images/logos/flags/france.svg' },
+    { name: 'German', level: cv.personal.languages.german, flag: '/images/logos/flags/germany.svg' }
+];
+
+const updatedDate = new Date().toLocaleDateString('en-EN', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+});
+---
+
+<Layout title={`CV - ${cv.personal.name}`} description={`CV of ${cv.personal.name}, PhD student in Aeronautics at Imperial College London.`}>
+    <Header />
+    <main class="cv-page">
+        <section class="cv-hero">
+            <div>
+                <p class="eyebrow">Curriculum vitae</p>
+                <h1>{cv.personal.name}</h1>
+                <h2>{cv.personal.title}</h2>
+                <p>{cv.personal.description}</p>
+                <a class="button button-primary pdf-download" href="/pdfs/cv/victor-ballester-cv.pdf" download aria-label="Download CV as PDF" title="Download CV as PDF">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 16" aria-hidden="true">
+                        <path d="M6.5 6A4 4 0 1114.5 6V7H15.5A3.5 3.5 0 1115.5 14 1 1 0 1015.5 16 5.5 5.5 0 0016.4 5.1 6 6 0 004.6 5.1 5.5 5.5 0 005.5 16 1 1 0 105.5 14H5.5A3.5 3.5 0 115.5 7H6.5ZM11.5 7A1 1 0 109.5 7V12.6L8.2 11.3A1 1 0 006.8 12.7L9.8 15.7A1 1 0 0011.2 15.7L14.2 12.7A1 1 0 0012.8 11.3L11.5 12.6Z"/>
+                    </svg>
+                </a>
+            </div>
+            <img src={cv.personal.photo} alt={cv.personal.name} />
+        </section>
+
+        <section class="cv-contact" aria-label="Contact information">
+            {contactLinks.map(contact => (
+                <a class={contact.className} href={contact.href} target={contact.href.startsWith('http') ? '_blank' : undefined} rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox={contact.icon.viewBox} aria-label={contact.label} role="img">
+                        {contact.icon.paths.map((path, index) => (
+                            <path class={contact.className === 'telegram' ? `telegram-path-${index + 1}` : undefined} d={path} />
+                        ))}
+                    </svg>
+                    {contact.label}
+                </a>
+            ))}
+        </section>
+
+        <section class="cv-section" id="education">
+            <h2>Education</h2>
+            <div class="cv-grid">
+                {cv.education.map(item => (
+                    <article class="cv-card">
+                        <div class="card-heading">
+                            <h3>{item.title}</h3>
+                            <time>{item.period}</time>
+                        </div>
+                        <h4>{item.institution}<span class="institution-location">{item.location}</span></h4>
+                        <ul>{item.description.map(description => <li set:html={description} />)}</ul>
+                    </article>
+                ))}
+            </div>
+        </section>
+
+        <section class="cv-section" id="experience">
+            <h2>Experience</h2>
+            <div class="cv-grid">
+                {cv.experience.map(item => (
+                    <article class="cv-card">
+                        <div class="card-heading">
+                            <h3>{item.title}</h3>
+                            <time>{item.period}</time>
+                        </div>
+                        <h4>{item.institution}<span class="institution-location">{item.location}</span></h4>
+                        <ul>{item.description.map(description => <li set:html={description} />)}</ul>
+                    </article>
+                ))}
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2>Research projects</h2>
+            <div class="cv-grid">
+                {cv.research_projects.map(item => (
+                    <article class="cv-card">
+                        <div class="card-heading">
+                            <h3>{item.title}</h3>
+                            <div class="card-meta">
+                                <time>{item.period}</time>
+                            </div>
+                        </div>
+                        <div class="resource-row">
+                            <h4>{item.location}</h4>
+                            <div class="resource-links">
+                                {item.report && <a class="report-link" href={item.report} target="_blank" rel="noopener noreferrer" aria-label={`Open report for ${item.title}`} title="Open report">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox={appIcons.pdf.viewBox} aria-hidden="true">
+                                        {appIcons.pdf.paths.map((path, index) => <path class={`pdf-path-${index + 1}`} d={path} />)}
+                                    </svg>
+                                </a>}
+                                {item.code && <a class="code-link" href={item.code} target="_blank" rel="noopener noreferrer" aria-label={`Open code for ${item.title}`} title="Open code">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox={appIcons.github.viewBox} aria-hidden="true">
+                                        {appIcons.github.paths.map(path => <path d={path} />)}
+                                    </svg>
+                                </a>}
+                            </div>
+                        </div>
+                        <ul>{item.description.map(description => <li set:html={description} />)}</ul>
+                    </article>
+                ))}
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2>Talks</h2>
+            <div class="cv-grid">
+                {cv.talks.map(item => (
+                    <article class="cv-card">
+                        <div class="card-heading">
+                            <h3>{item.title}</h3>
+                            <time>{item.period}</time>
+                        </div>
+                        <div class="resource-row talk-resource-row">
+                            <h4>{item.event}<span class="talk-location">{item.location}</span></h4>
+                            {item.slides && <div class="resource-links">
+                                <a class="slides-link" href={item.slides} target="_blank" rel="noopener noreferrer" aria-label={`Open slides for ${item.title}`} title="Open slides">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox={appIcons.pdf.viewBox} aria-hidden="true">
+                                        {appIcons.pdf.paths.map((path, index) => <path class={`pdf-path-${index + 1}`} d={path} />)}
+                                    </svg>
+                                </a>
+                            </div>}
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2>Awards and honors</h2>
+            <div class="cv-grid">
+                {cv.awards.map(item => (
+                    <article class="cv-card">
+                        <div class="card-heading">
+                            <h3>{item.title}</h3>
+                            <time>{item.period}</time>
+                        </div>
+                        <div class="resource-row award-resource-row">
+                            <h4>{item.institution}<span class="award-location">{item.location}</span></h4>
+                        </div>
+                        <ul>{item.description.map(description => <li set:html={description} />)}</ul>
+                    </article>
+                ))}
+            </div>
+        </section>
+
+        <section class="cv-section cv-details">
+                <h2>Languages</h2>
+                <div class="tag-list">
+                    {languages.map(language => (
+                        <span class="language-tag">
+                            <img src={language.flag} alt={`${language.name} flag`} />
+                            <strong>{language.name}</strong>
+                            <b>{language.level}</b>
+                        </span>
+                    ))}
+                </div>
+                <p class="cv-updated">Last updated: <time datetime={new Date().toISOString()}>{updatedDate}</time></p>
+        </section>
+    </main>
+    <Footer />
+</Layout>

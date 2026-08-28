@@ -7,7 +7,6 @@
         "years": [
             {
                 "year": "1st Year",
-                "subtitle": "Foundation",
                 "subjects": [
                     {
                         "title": "Fundamentals of mathematics",
@@ -25,7 +24,6 @@
             },
             {
                 "year": "2nd Year",
-                "subtitle": "Intermediate",
                 "subjects": [
                     {
                         "title": "Algebraic structures",
@@ -55,7 +53,6 @@
             },
             {
                 "year": "3rd Year",
-                "subtitle": "Advanced",
                 "subjects": [
                     {
                         "title": "Complex analysis",
@@ -89,7 +86,6 @@
             },
             {
                 "year": "4th Year",
-                "subtitle": "Specialized",
                 "subjects": [
                     {
                         "title": "Algebraic topology",
@@ -131,7 +127,7 @@
             },
             {
                 "year": "5th Year",
-                "subtitle": "Master Level",
+                "subtitle": "(master level)",
                 "subjects": [
                     {
                         "title": "Advanced dynamical systems",
@@ -173,7 +169,6 @@
         "levels": [
             {
                 "level": "Basic Level",
-                "subtitle": "Foundation Physics",
                 "subjects": [
                     {
                         "title": "Electricity and magnetism",
@@ -191,7 +186,6 @@
             },
             {
                 "level": "Advanced Level",
-                "subtitle": "Specialized Physics",
                 "subjects": [
                     {
                         "title": "Fluid mechanics",

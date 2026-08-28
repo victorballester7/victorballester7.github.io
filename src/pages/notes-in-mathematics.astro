@@ -3,6 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 import notes from '../content/notes.json';
+import { appIcons } from '../data/app-icons';
 import '../styles/notes-in-mathematics.css';
 ---
 
@@ -12,26 +13,23 @@ import '../styles/notes-in-mathematics.css';
         <section>
             <h1>Notes in Mathematics</h1>
             <p>This website intends to summarize some notes about each <em>important</em> subject in Mathematics degree at Autonomous University of Barcelona (UAB) and at Paris Dauphine - PSL University. These summaries aim to provide a concise overview of the key concepts and topics covered in each subject, serving as a helpful resource for students and anyone interested in these fields of study.</p>
-            <p><strong>Note:</strong> You can download the sections separately as you like or the whole file of Mathematics. Keep in mind that downloading sections separately may cause some inconsistencies in references of theorems, definitions... from other sections.</p>
+            <p><i><strong>Note:</strong> You can download the sections separately as you like or the whole file of Mathematics. Keep in mind that downloading sections separately may cause some inconsistencies in references of theorems, definitions... from other sections.</i></p>
         </section>
 
-        <section>
-            <h2>{notes.mathematics.fullSummary.title}</h2>
-            <a href={notes.mathematics.fullSummary.url} target="_blank">
-                <img src="/images/logos/others/pdf.svg" alt="PDF Icon">
-                Mathematics
+        <section class="mathematics-section">
+            <h2>Mathematics</h2>
+            <a class="full-summary-link" href={notes.mathematics.fullSummary.url} target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox={appIcons.pdf.viewBox} aria-label="PDF" role="img">
+                    {appIcons.pdf.paths.map((path, index) => <path class={`pdf-path-${index + 1}`} d={path} />)}
+                </svg>
+                {notes.mathematics.fullSummary.title}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 11">
                     <path d="M7.793.293A1 1 0 019.207.293L13.707 4.793A1 1 0 0113.707 6.207L9.207 10.707A1 1 0 017.793 9.293L10.5 6.5H1A1 1 0 011 4.5H10.5L7.793 1.707A1 1 0 017.793.293"/>
                 </svg>
             </a>
-        </section>
-
-        <section>
-            <h2>Mathematics</h2>
             {notes.mathematics.years.map(yearData => (
                 <article>
                     <h3>
-                        <img src="/images/logos/others/pdf.svg" alt="PDF Icon">
                         <small>{yearData.year}</small> {yearData.subtitle}
                     </h3>
                     <ul>
@@ -50,12 +48,11 @@ import '../styles/notes-in-mathematics.css';
             ))}
         </section>
 
-        <section>
+        <section class="physics-section">
             <h2>Topics in Physics</h2>
             {notes.physics.levels.map(levelData => (
                 <article>
                     <h3>
-                        <img src="/images/logos/others/pdf.svg" alt="PDF Icon">
                         <small>{levelData.level}</small> {levelData.subtitle}
                     </h3>
                     <ul>

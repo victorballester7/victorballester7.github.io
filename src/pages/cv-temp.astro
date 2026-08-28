@@ -19,7 +19,7 @@ const buildDate = new Date().toLocaleDateString('en-EN', {
     <link rel="stylesheet" href="/styles/cv-temp.css">
 </head>
 <body>
-    <img src="/images/logos/others/boeing-747.svg" alt="Boeing 747">
+    <!-- <img src="/images/logos/others/boeing-747.svg" alt="Boeing 747"> -->
     <header>
         <img src={cv.personal.photo} alt={cv.personal.name}>
         <h1>{cv.personal.name}</h1>
@@ -44,11 +44,6 @@ const buildDate = new Date().toLocaleDateString('en-EN', {
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14">
                     <path d="M15.987 1.209C16.111.403 15.345-.232 14.629.082L.365 6.345C-.149 6.57-.111 7.348.421 7.518L3.363 8.455C3.925 8.634 4.533 8.541 5.023 8.202L11.655 3.62C11.855 3.482 12.073 3.767 11.902 3.943L7.128 8.865C6.665 9.342 6.757 10.151 7.314 10.501L12.659 13.852C13.259 14.228 14.029 13.851 14.142 13.126Z"/>
                 </svg> {cv.personal.contact.telegram}
-            </a>
-            <a href={`https://www.linkedin.com/in/${cv.personal.contact.linkedin}`} target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 382 382" class="linkedin-icon">
-                    <path d="M 347.445 0 H 34.555 C 15.471 0 0 15.471 0 34.555 V 347.444 C 0 366.529 15.471 382 34.555 382 H 347.444 C 366.529 382 382 366.529 382 347.444 V 34.555 C 382 15.471 366.529 0 347.445 0 M 118.207 329.844 C 118.207 335.398 113.705 339.9 108.151 339.9 H 65.345 C 59.791 339.9 55.289 335.398 55.289 329.844 V 150.403 C 55.289 144.849 59.791 140.347 65.345 140.347 H 108.151 C 113.705 140.347 118.207 144.849 118.207 150.403 Z M 86.748 123.432 C 64.289 123.432 46.082 105.225 46.082 82.766 S 64.289 42.1 86.748 42.1 S 127.414 60.307 127.414 82.766 S 109.208 123.432 86.748 123.432 M 341.91 330.654 A 9.247 9.247 0 0 1 332.664 339.9 H 286.73 A 9.247 9.247 0 0 1 277.484 330.654 V 246.486 C 277.484 233.93 281.167 191.465 244.671 191.465 C 216.362 191.465 210.62 220.531 209.467 233.575 V 330.654 A 9.246 9.246 0 0 1 200.221 339.9 H 155.795 A 9.247 9.247 0 0 1 146.549 330.654 V 149.593 A 9.247 9.247 0 0 1 155.795 140.347 H 200.221 A 9.247 9.247 0 0 1 209.467 149.593 V 165.248 C 219.964 149.495 235.564 137.336 268.779 137.336 C 342.331 137.336 341.91 206.052 341.91 243.808 Z"/>
-                </svg> {cv.personal.contact.linkedin}
             </a>
             <a href={`https://github.com/${cv.personal.contact.github}`} target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 21.46">
@@ -201,23 +196,6 @@ const buildDate = new Date().toLocaleDateString('en-EN', {
                 </ul>
             </section>
 
-            <section>
-                <h3>Hobbies & Interests</h3>
-                <ul>
-                    {cv.personal.hobbies.map(hobby => (
-                        <li>{hobby}</li>
-                    ))}
-                </ul>
-            </section>
-
-            <section>
-                <h3>Additional Information</h3>
-                <ul>
-                    {cv.personal.others.map(item => (
-                        <li>{item}</li>
-                    ))}
-                </ul>
-            </section>
         </div>
 
         <div>

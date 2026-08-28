@@ -95,28 +95,20 @@ footer address a svg {
     width: 20px;
     height: auto;
     transition: var(--transition-base);
-}
-
-footer address a svg path {
     fill: var(--color-gray-500);
-    transition: var(--transition-base);
-}
-
-footer address a.telegram svg path:last-child {
-    fill: var(--color-gray-800);
 }
 
 footer address a.email:hover { background: var(--color-white); }
-footer address a.email:hover svg path { fill: var(--color-black); }
-footer address a.telegram:hover { background: var(--color-telegram); }
-footer address a.telegram:hover svg path:first-child { fill: var(--color-white); }
-footer address a.telegram:hover svg path:last-child { fill: var(--color-telegram); }
+footer address a.email:hover svg { fill: var(--color-black); }
 footer address a.whatsapp:hover { background: var(--color-whatsapp); }
-footer address a.whatsapp:hover svg path{ fill: var(--color-white); }
-footer address a.github:hover { background: var(--color-github); }
-footer address a.github:hover svg path { fill: var(--color-white); }
-footer address a.linkedin:hover { background: var(--color-linkedin); }
-footer address a.linkedin:hover svg path { fill: var(--color-white); }
+footer address a.whatsapp:hover svg { fill: var(--color-white); }
+footer address a.telegram svg .telegram-path-2 { fill: var(--color-gray-800); }
+footer address a.telegram:hover { background: var(--color-telegram); }
+footer address a.telegram:hover .telegram-path-1 { fill: var(--color-white); }
+footer address a.telegram:hover .telegram-path-2 { fill: var(--color-telegram); }
+footer address a.github:hover { background: var(--color-white); }
+footer address a.github:hover svg { fill: var(--color-black); }
+
 
 footer strong {
     grid-column: 1 / -1;

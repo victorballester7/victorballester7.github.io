@@ -58,7 +58,7 @@ This will create a `dist/` directory with the built site.
 Start the local development server:
 
 ```bash
-npm run preview
+npm run dev
 ```
 
 Astro will start a local server, usually at `http://localhost:4321`. Open it in your browser to see the site with hot reloading enabled.

@@ -23,7 +23,7 @@ main section:first-of-type {
     background: linear-gradient(180deg, var(--color-primary-opacity) 0%, var(--color-black) 100%);
     backdrop-filter: blur(20px);
     border-radius: var(--border-radius-2xl);
-    padding: var(--space-5xl);
+    padding: var(--space-2xl);
     box-shadow: var(--shadow-sm) var(--color-black);
     text-align: center;
     overflow: hidden;
@@ -143,14 +143,21 @@ main section:first-of-type figcaption {
     flex-grow: 1;
 }
 
-.info-vb a svg {
+.info-vb a img {
     width: 40px;
+    max-height: 40px;
     height: auto;
-    fill: var(--color-tertiary);
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(70%) sepia(48%) saturate(1167%) hue-rotate(183deg) brightness(91%) contrast(91%);
 }
 
-.info-vb a svg.imperial {
+.info-vb a img.imperial {
     width: 128px;
+    max-height: 40px;
+}
+
+.info-vb a img.flag {
+    filter: none;
 }
 
 @keyframes moveShields {
@@ -177,23 +184,16 @@ main section:first-of-type::after {
 
 /* === ABOUT ARTICLE === */
 main article {
-    background: linear-gradient(180deg, var(--color-black) 0%, var(--color-primary-opacity) 100%);
-    border-radius: var(--border-radius-2xl);
-    padding: var(--space-5xl);
-    box-shadow: var(--shadow-sm) var(--color-primary-opacity);
-    overflow: hidden;
+    padding: var(--space-2xl);
 }
 
 main article p:first-of-type {
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-medium);
     color: var(--color-white);
-    background: var(--color-gray-800);
     padding: var(--space-2xl);
-    border-radius: var(--border-radius-xl);
     border-left: var(--border-width-xl) solid var(--color-primary);
     margin-bottom: var(--space-3xl);
-    box-shadow: var(--shadow-md) var(--color-primary-opacity);
 }
 
 main article p {
@@ -250,16 +250,13 @@ main p a.person:hover {
 
 /* === HOBBIES === */
 main section:nth-of-type(2) {
-    background: var(--color-primary-opacity);
     color: var(--color-white);
     padding: var(--space-3xl);
-    border-radius: var(--border-radius-2xl);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    box-shadow: var(--shadow-primary);
     position: relative;
     transition: var(--transition-base);
     min-height: calc(var(--container-width-xs) - 100px);
@@ -319,13 +316,8 @@ main section:nth-of-type(2) p {
 
 /* === CONTACT === */
 main section:nth-of-type(3) {
-    background:
-        radial-gradient(circle at 30% 30%, var(--color-primary-opacity) 0%, transparent 60%),
-        radial-gradient(circle at 70% 70%, var(--color-secondary-opacity) 0%, transparent 60%);
-    border-radius: var(--border-radius-2xl);
     padding: var(--space-2xl);
-    box-shadow: var(--shadow-sm) var(--color-primary-opacity);
-    text-align: center;
+    text-align: left;
 }
 
 main section:nth-of-type(3) p {
@@ -359,7 +351,7 @@ main address a.email { border: var(--border-width-thin) solid var(--color-white)
 main address a.telegram { border: var(--border-width-thin) solid var(--color-telegram); color: var(--color-telegram); }
 main address a.whatsapp { border: var(--border-width-thin) solid var(--color-whatsapp); color: var(--color-whatsapp); }
 main address a.github { border: var(--border-width-thin) solid var(--color-white); color: var(--color-white); }
-main address a.linkedin { border: var(--border-width-thin) solid var(--color-linkedin); color: var(--color-linkedin); }
+main address a.linkedin { border: var(--border-width-thin) solid var(--color-white); color: var(--color-white); }
 
 main section:nth-of-type(3) address a::before {
     content: "";
@@ -373,8 +365,8 @@ main section:nth-of-type(3) address a::before {
 main section:nth-of-type(3) address a.email::before { background: var(--color-white); }
 main section:nth-of-type(3) address a.telegram::before { background: var(--color-telegram); }
 main section:nth-of-type(3) address a.whatsapp::before { background: var(--color-whatsapp); }
-main section:nth-of-type(3) address a.github::before { background: var(--color-github); }
-main section:nth-of-type(3) address a.linkedin::before { background: var(--color-linkedin); }
+main section:nth-of-type(3) address a.github::before { background: var(--color-white); }
+main section:nth-of-type(3) address a.linkedin::before { background: var(--color-white); }
 
 main section:nth-of-type(3) address a:hover::before {
     transform: translateY(0);
@@ -391,7 +383,11 @@ main section:nth-of-type(3) address a.email:hover {
 }
 
 main section:nth-of-type(3) address a.github:hover {
-    border-color: var(--color-github);
+    color: var(--color-black);
+}
+
+main section:nth-of-type(3) address a.linkedin:hover {
+    color: var(--color-black);
 }
 
 main section:nth-of-type(3) address a svg {
@@ -406,21 +402,18 @@ main section:nth-of-type(3) address a.telegram svg path:first-child { fill: var(
 main section:nth-of-type(3) address a.telegram svg path:last-child { fill: var(--color-white); transition: all var(--transition-base); }
 main section:nth-of-type(3) address a.whatsapp svg { fill: var(--color-whatsapp); }
 main section:nth-of-type(3) address a.github svg { fill: var(--color-white); }
-main section:nth-of-type(3) address a.linkedin svg { fill: var(--color-linkedin); }
-
+main section:nth-of-type(3) address a.linkedin svg { fill: var(--color-white); }
 main section:nth-of-type(3) address a.email:hover svg { fill: var(--color-black); }
 main section:nth-of-type(3) address a.telegram:hover svg path:first-child { fill: var(--color-white); }
 main section:nth-of-type(3) address a.telegram:hover svg path:last-child { fill: var(--color-telegram); }
-main section:nth-of-type(3) address a:hover svg  {fill: var(--color-white); }
+main section:nth-of-type(3) address a.github:hover svg { fill: var(--color-black); }
+main section:nth-of-type(3) address a.linkedin:hover svg { fill: var(--color-black); }
+main section:nth-of-type(3) address a:hover svg {fill: var(--color-white); }
 
 
 /* === ABOUT ARTICLE === */
 main section:nth-of-type(4) {
-    background: linear-gradient(180deg, var(--color-black) 0%, var(--color-tertiary-opacity) 100%);
-    border-radius: var(--border-radius-2xl);
-    padding: var(--space-5xl);
-    box-shadow: var(--shadow-sm) var(--color-primary-opacity);
-    overflow: hidden;
+    padding: var(--space-2xl);
 }
 
 main section:nth-of-type(4) {
@@ -458,7 +451,7 @@ main section:nth-of-type(4) {
         height: 200px;
     }
 
-    .info-vb a svg.imperial {
+    .info-vb a img.imperial {
         width: 100px;
     }
 
@@ -515,7 +508,7 @@ main section:nth-of-type(4) {
         height: 180px;
     }
 
-    .info-vb a svg.imperial {
+    .info-vb a img.imperial {
         width: 100px;
     }
 
@@ -544,5 +537,3 @@ main section:nth-of-type(4) {
         height: 24px;
     }
 }
-
-

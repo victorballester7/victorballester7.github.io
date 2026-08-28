@@ -252,7 +252,7 @@ main section article ul li:last-child {
 footer {
     position: absolute;
     left: -0.25%;
-    bottom: calc(-1109.5px * 1);  /* -1109.Xpx * numero de paginas -1 (X se va retocando) */
+    top: 2113px;
     width: 100.5%;
     padding: var(--space-lg) var(--space-xl);
     background-image:
@@ -264,13 +264,12 @@ footer {
     border-top-right-radius: var(--border-radius-xl);
     color: var(--color-white);
     box-shadow: 0 -8px 16px var(--color-primary-opacity);
+    break-inside: avoid;
 }
 
 /* Contenedor principal del footer */
 footer > div:first-child {
-    display: grid;
-    grid-template-columns: 40% 30% 30%;
-    gap: var(--space-lg);
+    display: block;
     margin-bottom: var(--space-sm);
 }
 
@@ -299,15 +298,15 @@ footer ul {
 }
 
 /* Hobbies y Others - con markers */
-footer section:nth-child(2) ul,
-footer section:nth-child(3) ul {
-    list-style: disclosure-closed;
-}
-
-footer section:nth-child(2) ul li::marker,
-footer section:nth-child(3) ul li::marker {
-    color: var(--color-primary);
-}
+/* footer section:nth-child(2) ul, */
+/* footer section:nth-child(3) ul { */
+/*     list-style: disclosure-closed; */
+/* } */
+/**/
+/* footer section:nth-child(2) ul li::marker, */
+/* footer section:nth-child(3) ul li::marker { */
+/*     color: var(--color-primary); */
+/* } */
 
 footer ul li {
     margin-bottom: var(--space-xs);
@@ -316,19 +315,21 @@ footer ul li {
     color: var(--color-bg-light);
 }
 
-/* === IDIOMAS - Layout en 2 columnas === */
+/* === IDIOMAS === */
 footer section:first-child ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-xs) var(--space-sm);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--space-lg);
+    width: 100%;
 }
 
 footer section:first-child li {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: var(--space-xs);
     font-size: var(--font-size-sm);
+    white-space: nowrap;
 }
 
 footer section:first-child img {
@@ -340,8 +341,9 @@ footer section:first-child img {
 }
 
 footer section:first-child span {
-    flex: 1;
-    text-align: right;
+    display: inline-block;
+    min-width: 48px;
+    text-align: center;
     font-weight: var(--font-weight-medium);
     color: var(--color-primary);
     background: linear-gradient(
@@ -364,11 +366,11 @@ footer section:nth-child(3) ul {
 
 /* niveles */
 span[data-level="native"] { --level: 100%; }
-span[data-level="c1"] { --level: 80%; }
-span[data-level="b2"] { --level: 60%; }
-span[data-level="b1"] { --level: 40%; }
-span[data-level="a2"] { --level: 20%; }
-span[data-level="a1"] { --level: 10%; }
+span[data-level="c1"] { --level: 100%; }
+span[data-level="b2"] { --level: 100%; }
+span[data-level="b1"] { --level: 100%; }
+span[data-level="a2"] { --level: 100%; }
+span[data-level="a1"] { --level: 100%; }
 
 /* Footer meta (última actualización) */
 footer > div:last-child {

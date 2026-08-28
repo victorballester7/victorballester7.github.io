@@ -9,7 +9,6 @@
       "phone": "+447584683859",
       "location": "London, UK",
       "telegram": "victorballester",
-      "linkedin": "victorballester7",
       "github": "victorballester7"
     },
     "languages": {
@@ -18,9 +17,7 @@
       "english": "C1",
       "french": "B2",
       "german": "B1"
-    },
-    "hobbies": ["Cycling", "Hiking", "Physics", "Engineering", "Traveling", "Racing"],
-    "others": ["Driving License B"]
+    }
   },
   "education": [
     {
@@ -29,8 +26,8 @@
       "location": "London, UK",
       "period": "October 2024 - Present",
       "description": [
-        "Working on flow transition over gaps using <a href='https://www.nektar.info/' target='_blank'>Nektar++</a>.",
-        "Supervised by <a href='https://profiles.imperial.ac.uk/s.sherwin' target='_blank'>Spencer Sherwin</a> and <a href='https://www.imperial.ac.uk/people/y.hwang' target='_blank'>Yongyun Hwang</a>."
+        "Working on flow transition over gaps using <a class='project' href='https://www.nektar.info/' target='_blank'>Nektar++</a>.",
+        "Supervised by <a class='person' href='https://profiles.imperial.ac.uk/s.sherwin' target='_blank'>Spencer Sherwin</a> and <a class='person' href='https://www.imperial.ac.uk/people/y.hwang' target='_blank'>Yongyun Hwang</a>."
       ]
     },
     {
@@ -41,7 +38,7 @@
       "description": [
         "GPA: 16.54 / 20.00",
         "Minor in Physics, specifically in Computational Fluid Dynamics.",
-        "Final master's project (supervised by <a href='https://www.phys.ens.fr/~alexakis/' target='_blank'>Alexandros Alexakis</a> and <a href='https://www.math.ens.psl.eu/~dormy/' target='_blank'>Emmanuel Dormy</a>): 2D turbulence spreading."
+        "Final master's project (supervised by <a class='person' href='https://www.phys.ens.fr/~alexakis/' target='_blank'>Alexandros Alexakis</a> and <a class='person' href='https://www.math.ens.psl.eu/~dormy/' target='_blank'>Emmanuel Dormy</a>): 2D turbulence spreading."
       ]
     },
     {
@@ -53,7 +50,7 @@
         "GPA: 9.42 / 10.00",
         "Ranked #1 in my graduating class.",
         "Honors: 186 / 240 ETCS",
-        "Final bachelor's project (supervised by <a href='https://www.gsd.uab.es/people?controller=member&view=member&id=9&slug=josep-maria' target='_blank'>J.M. Mondelo</a>): Numerical propagation of trajectories of Earth-orbiting spacecraft."
+        "Final bachelor's project (supervised by <a class='person' href='https://www.gsd.uab.es/people?controller=member&view=member&id=9&slug=josep-maria' target='_blank'>J.M. Mondelo</a>): Numerical propagation of trajectories of Earth-orbiting spacecraft."
       ]
     }
   ],
@@ -101,7 +98,7 @@
       "period": "July 03 - July 28, 2023",
       "description": [
         "Attendance to minicourses on Introduction to Research, from the fields of Algebraic Topology and Number Theory to Applied Mathematics and Discrete Mathematics.",
-        "Worked on a research project (supervised by <a href='https://web.mat.upc.edu/jezabel.curbelo/' target='_blank'>Jezabel Curbelo</a> and <a href='https://df.upc.edu/en/instabilities/people/alvaro.meseguer' target='_blank'>Álvaro Meseguer</a>): From chaotic dynamical systems to fluid turbulence."
+        "Worked on a research project (supervised by <a class='person' href='https://web.mat.upc.edu/jezabel.curbelo/' target='_blank'>Jezabel Curbelo</a> and <a class='person' href='https://df.upc.edu/en/instabilities/people/alvaro.meseguer' target='_blank'>Álvaro Meseguer</a>): From chaotic dynamical systems to fluid turbulence."
       ]
     }
   ],
@@ -114,7 +111,7 @@
       "code": "https://github.com/victorballester7/final-master-thesis",
       "description": [
         "Study of the 2D turbulence propagation after locally injected turbulence is applied in the center of the domain.",
-        "Supervised by <a href='https://www.phys.ens.fr/~alexakis/' target='_blank'>Alexandros Alexakis</a> and <a href='https://www.math.ens.psl.eu/~dormy/' target='_blank'>Emmanuel Dormy</a>."
+        "Supervised by <a class='person' href='https://www.phys.ens.fr/~alexakis/' target='_blank'>Alexandros Alexakis</a> and <a class='person' href='https://www.math.ens.psl.eu/~dormy' target='_blank'>Emmanuel Dormy</a>."
       ]
     },
     {
@@ -125,7 +122,7 @@
       "code": "https://github.com/victorballester7/2D-kuramoto-sivashinsky",
       "description": [
         "Dynamical systems study of the instabilities and chaotic states of the 2D Kuramoto-Sivashinsky equation.",
-        "Supervised by <a href='https://blog.espci.fr/laurette/' target='_blank'>Laurette Tuckerman</a>."
+        "Supervised by <a class='person' href='https://blog.espci.fr/laurette/' target='_blank'>Laurette Tuckerman</a>."
       ]
     },
     {
@@ -136,7 +133,7 @@
       "code": "https://github.com/victorballester7/final-bachelor-thesis",
       "description": [
         "Reconstruction of orbits of satellites from real initial data when considering the Earth a non-uniform spherical distribution of mass and other minor perturbations.",
-        "Supervised by <a href='https://www.gsd.uab.es/people?controller=member&view=member&id=9&slug=josep-maria' target='_blank'>J.M. Mondelo</a>."
+        "Supervised by <a class='person' href='https://www.gsd.uab.es/people?controller=member&view=member&id=9&slug=josep-maria' target='_blank'>J.M. Mondelo</a>."
       ]
     }
   ],
@@ -213,7 +210,7 @@
       "location": "Online",
       "period": "November 2021",
       "description": [
-        "Best qualified Spanish pair on the west division of the 2021 Simon Marais Mathematics Competition, jointly with <a href='https://github.com/misaelmalqui' target='_blank'>Misael Malqui</a>."
+        "Best qualified Spanish pair on the west division of the 2021 Simon Marais Mathematics Competition, jointly with <a class='person' href='https://github.com/misaelmalqui' target='_blank'>Misael Malqui</a>."
       ]
     },
     {
