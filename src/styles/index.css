@@ -383,7 +383,7 @@ main section:nth-of-type(3) address a.email:hover {
 }
 
 main section:nth-of-type(3) address a.github:hover {
-    color: var(--color-black);
+    color: var(--color-github);
 }
 
 main section:nth-of-type(3) address a.linkedin:hover {

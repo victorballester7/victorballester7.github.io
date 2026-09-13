@@ -12,13 +12,11 @@
     --color-primary-dark: color-mix(in srgb, var(--color-primary), #000 40%);
     --color-secondary-dark: color-mix(in srgb, var(--color-secondary), #000 40%);
     --color-tertiary-dark: color-mix(in srgb, var(--color-tertiary), #000 40%);
-    --color-quaternary-dark: color-mix(in srgb, var(--color-quaternary), #000 40%);
 
     /* Automatically transparent versions */
     --color-primary-opacity: color-mix(in srgb, var(--color-primary) 30%, transparent);
     --color-secondary-opacity: color-mix(in srgb, var(--color-secondary) 30%, transparent);
     --color-tertiary-opacity: color-mix(in srgb, var(--color-tertiary) 30%, transparent);
-    --color-quaternary-opacity: color-mix(in srgb, var(--color-quaternary) 30%, transparent);
 
     /* === NEUTRALS === */
     --color-white: #ffffff;

@@ -41,6 +41,7 @@ const updatedDate = new Date().toLocaleDateString('en-EN', {
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 16" aria-hidden="true">
                         <path d="M6.5 6A4 4 0 1114.5 6V7H15.5A3.5 3.5 0 1115.5 14 1 1 0 1015.5 16 5.5 5.5 0 0016.4 5.1 6 6 0 004.6 5.1 5.5 5.5 0 005.5 16 1 1 0 105.5 14H5.5A3.5 3.5 0 115.5 7H6.5ZM11.5 7A1 1 0 109.5 7V12.6L8.2 11.3A1 1 0 006.8 12.7L9.8 15.7A1 1 0 0011.2 15.7L14.2 12.7A1 1 0 0012.8 11.3L11.5 12.6Z"/>
                     </svg>
+                    <span class="button-label">Download PDF</span>
                 </a>
             </div>
             <img src={cv.personal.photo} alt={cv.personal.name} />
@@ -109,11 +110,13 @@ const updatedDate = new Date().toLocaleDateString('en-EN', {
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox={appIcons.pdf.viewBox} aria-hidden="true">
                                         {appIcons.pdf.paths.map((path, index) => <path class={`pdf-path-${index + 1}`} d={path} />)}
                                     </svg>
+                                    <span class="resource-label">Report</span>
                                 </a>}
                                 {item.code && <a class="code-link" href={item.code} target="_blank" rel="noopener noreferrer" aria-label={`Open code for ${item.title}`} title="Open code">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox={appIcons.github.viewBox} aria-hidden="true">
                                         {appIcons.github.paths.map(path => <path d={path} />)}
                                     </svg>
+                                    <span class="resource-label">Code</span>
                                 </a>}
                             </div>
                         </div>
@@ -139,6 +142,7 @@ const updatedDate = new Date().toLocaleDateString('en-EN', {
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox={appIcons.pdf.viewBox} aria-hidden="true">
                                         {appIcons.pdf.paths.map((path, index) => <path class={`pdf-path-${index + 1}`} d={path} />)}
                                     </svg>
+                                    <span class="resource-label">Slides</span>
                                 </a>
                             </div>}
                         </div>
@@ -176,7 +180,6 @@ const updatedDate = new Date().toLocaleDateString('en-EN', {
                         </span>
                     ))}
                 </div>
-                <p class="cv-updated">Last updated: <time datetime={new Date().toISOString()}>{updatedDate}</time></p>
         </section>
     </main>
     <Footer />

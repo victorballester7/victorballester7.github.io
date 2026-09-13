@@ -89,6 +89,11 @@
     width: 24px;
     height: 24px;
     fill: currentColor;
+    flex-shrink: 0;
+}
+
+.pdf-download .button-label {
+    display: none;
 }
 
 .button:hover,
@@ -158,7 +163,7 @@
 .cv-contact a.email:hover { color: var(--color-black); }
 .cv-contact a.telegram:hover { color: var(--color-white); }
 .cv-contact a.whatsapp:hover { color: var(--color-white); }
-.cv-contact a.github:hover { color: var(--color-black); }
+.cv-contact a.github:hover { color: var(--color-github); }
 
 .cv-contact a svg {
     width: 32px;
@@ -235,6 +240,7 @@
 
 .institution-location {
     margin-left: var(--space-lg);
+    white-space: nowrap;
 }
 
 .institution-location::before {
@@ -259,6 +265,8 @@
 
 .cv-card ul a {
     padding: var(--space-xs) var(--space-sm);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
     border-radius: var(--border-radius-sm);
     color: var(--color-tertiary);
     font-weight: var(--font-weight-semibold);
@@ -307,20 +315,17 @@
     align-items: center;
     justify-content: space-between;
     gap: var(--space-lg);
-}
-
-.resource-row h4 {
     margin-bottom: var(--space-md);
 }
 
-.talk-resource-row h4 {
-    display: flex;
-    align-items: baseline;
-    gap: var(--space-lg);
+.resource-row h4 {
+    margin-bottom: 0;
 }
 
 .talk-location {
+    margin-left: var(--space-lg);
     color: var(--color-gray-500);
+    white-space: nowrap;
 }
 
 .talk-location::before {
@@ -366,14 +371,10 @@
     justify-content: flex-start;
 }
 
-.award-resource-row h4 {
-    display: flex;
-    align-items: baseline;
-    gap: var(--space-lg);
-}
-
 .award-location {
+    margin-left: var(--space-lg);
     color: var(--color-gray-500);
+    white-space: nowrap;
 }
 
 .award-location::before {
@@ -394,30 +395,17 @@
 
 .resource-links a {
     display: inline-flex;
+    align-items: center;
     padding: var(--space-xs);
 }
 
-.cv-details {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-}
-
-.cv-details h2 {
-    margin: 0 0 var(--space-md);
-    padding-bottom: var(--space-md);
-    color: var(--color-primary);
-    border-bottom: var(--border-width-thick) solid var(--color-primary-dark);
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-bold);
-    letter-spacing: var(--letter-spacing-wide);
-    text-transform: uppercase;
+.resource-label {
+    display: none;
 }
 
 .tag-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     gap: var(--space-lg);
 }
 
@@ -430,11 +418,10 @@
 }
 
 .language-tag {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: var(--space-md);
-    flex: 1;
-    min-width: 0;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-md);
     background: linear-gradient(90deg, var(--color-primary-opacity), var(--color-gray-800));
 }
 
@@ -448,6 +435,7 @@
 
 .language-tag strong {
     flex: 1;
+    min-width: 0;
     color: var(--color-gray-100);
     font-weight: var(--font-weight-medium);
 }
@@ -471,30 +459,152 @@
 }
 
 @media (max-width: 768px) {
+    .cv-page {
+        gap: var(--space-4xl);
+        padding-inline: var(--space-lg);
+    }
+
+    /* === HERO === */
     .cv-hero {
         grid-template-columns: 1fr;
+        gap: var(--space-2xl);
         padding: var(--space-2xl);
     }
 
     .cv-hero > img {
-        width: 140px;
-        height: 140px;
+        order: -1;
+        justify-self: center;
+        width: 130px;
+        height: 130px;
     }
 
-    .cv-details {
-        grid-template-columns: 1fr;
+    .cv-hero .eyebrow {
+        margin-bottom: var(--space-lg);
     }
 
-    .tag-list {
-        flex-wrap: wrap;
+    .cv-hero h1 {
+        margin-bottom: var(--space-md);
     }
 
-    .card-heading {
-        display: block;
+    .cv-hero h2 {
+        margin-bottom: var(--space-xl);
+        font-size: var(--font-size-lg);
+    }
+
+    .cv-hero p:not(.eyebrow) {
+        font-size: var(--font-size-base);
+    }
+
+    .pdf-download {
+        gap: var(--space-md);
+        width: auto;
+        height: auto;
+        margin-top: var(--space-2xl);
+        padding: var(--space-md) var(--space-xl);
+    }
+
+    .pdf-download .button-label {
+        display: inline;
+    }
+
+    /* === CONTACT === */
+    .cv-contact {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: var(--space-md);
+    }
+
+    .cv-contact a {
+        padding: var(--space-lg) var(--space-md);
+        font-size: var(--font-size-base);
+    }
+
+    .cv-contact a svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* === SECTIONS === */
+    .cv-section > h2 {
+        margin-bottom: var(--space-xl);
+        font-size: var(--font-size-lg);
+    }
+
+    .cv-card {
+        padding: var(--space-xs) 0 var(--space-lg) var(--space-lg);
+    }
+
+    .cv-card h3 {
+        font-size: var(--font-size-md);
+        line-height: var(--line-height-tight);
     }
 
     .cv-card time {
+        font-size: var(--font-size-base);
+    }
+
+    .cv-card h4 {
+        font-size: var(--font-size-base);
+    }
+
+    .cv-card ul {
+        padding-left: var(--space-lg);
+        font-size: var(--font-size-base);
+    }
+}
+
+/* Phones: one entry per line instead of two columns */
+@media (max-width: 600px) {
+    .card-heading,
+    .card-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+    }
+
+    .cv-card h4 {
+        margin: var(--space-sm) 0 var(--space-md);
+    }
+
+    /* The place gets its own line, so the "|" separator is dropped */
+    .institution-location,
+    .talk-location,
+    .award-location {
         display: block;
-        margin-top: var(--space-xs);
+        margin-left: 0;
+    }
+
+    .institution-location::before,
+    .talk-location::before,
+    .award-location::before {
+        content: none;
+    }
+
+    .resource-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-md);
+    }
+
+    /* Icon-only links become labelled pills: easier to read and to tap */
+    .resource-links {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .resource-links a {
+        gap: var(--space-sm);
+        padding: var(--space-sm) var(--space-md);
+        border: var(--border-width-thin) solid var(--color-primary-dark);
+        border-radius: var(--border-radius-md);
+        font-weight: var(--font-weight-semibold);
+    }
+
+    .resource-links svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .resource-label {
+        display: inline;
     }
 }
