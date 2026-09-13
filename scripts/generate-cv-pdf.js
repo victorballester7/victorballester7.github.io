@@ -13,6 +13,16 @@ function imageToBase64(imagePath) {
     return `data:${mimeType};base64,${imageContent.toString('base64')}`;
 }
 
+// Chrome escribe un objeto /Type /Page por página; /Count es el respaldo.
+function countPdfPages(pdf) {
+    const raw = Buffer.from(pdf).toString('latin1');
+    const pages = (raw.match(/\/Type\s*\/Page[^s]/g) || []).length;
+    if (pages > 0) return pages;
+    
+    const count = raw.match(/\/Count\s+(\d+)/);
+    return count ? Number(count[1]) : 1;
+}
+
 async function generatePDF() {
     console.log('🚀 Generating CV PDF...');
     
@@ -81,13 +91,41 @@ async function generatePDF() {
     
     const pdfPath = join(pdfDir, 'victor-ballester-cv.pdf');
     
-    // Generar PDF
-    await page.pdf({
-        path: pdfPath,
+    const pdfOptions = {
         format: 'A4',
         printBackground: true,
         preferCSSPageSize: true
+    };
+    
+    // El pie va anclado al final de la última página, así que primero se
+    // imprime sin él para saber cuántas páginas ocupa el contenido y cuánto
+    // mide el pie. Esos dos datos se le pasan al CSS como variables.
+    const hiddenFooter = await page.addStyleTag({ content: 'footer { display: none }' });
+    const probe = await page.pdf(pdfOptions);
+    await hiddenFooter.evaluate(style => style.remove());
+    
+    const totalPages = countPdfPages(probe);
+    const footerHeight = await page.evaluate(
+        () => Math.ceil(document.querySelector('footer').getBoundingClientRect().height)
+    );
+    
+    await page.addStyleTag({
+        content: `:root { --total-pages: ${totalPages}; --footer-height: ${footerHeight}px; }`
     });
+    console.log(`📐 ${totalPages} page(s), footer ${footerHeight}px tall`);
+    
+    // Si el contenido llega hasta el pie, hay que recortar algo
+    const overlap = await page.evaluate(() => {
+        const main = document.querySelector('main').getBoundingClientRect().bottom;
+        const footer = document.querySelector('footer').getBoundingClientRect().top;
+        return Math.ceil(main - footer);
+    });
+    if (overlap > 0) {
+        console.warn(`⚠ The content overlaps the footer by ${overlap}px`);
+    }
+    
+    // Generar PDF
+    await page.pdf({ path: pdfPath, ...pdfOptions });
     
     await browser.close();
     console.log('✅ CV PDF generated successfully at:', pdfPath);

@@ -1,6 +1,33 @@
 /* ============================================
     CV - Víctor Ballester Ribó - A4 PDF
 ============================================ */
+
+/* === GEOMETRÍA DE LA PÁGINA ===
+   Todo lo que tiene que cuadrar con la hoja A4 se deriva de estas
+   variables, para no repartir números mágicos por la hoja de estilos.
+   --total-pages y --footer-height las inyecta scripts/generate-cv-pdf.js
+   después de medir el documento; los valores de aquí son sólo el
+   respaldo para cuando se abre /cv-temp directamente en el navegador. */
+:root {
+    --page-height: 297mm;
+    --page-margin-top: var(--space-3xl);
+    --total-pages: 2;
+    --footer-height: 103px;
+
+    /* Columna lateral: la cabecera está fuera del flujo (position: absolute),
+       así que la primera sección reserva su altura para no solaparse. */
+    --sidebar-width: 32%;
+    --sidebar-height: 132mm;
+    --sidebar-gap: var(--space-xl);
+    /* Aire por debajo de la barra lateral, para que su sombra no caiga
+       encima del título de la sección siguiente. */
+    --sidebar-clearance: var(--space-xl);
+
+    /* Padding de <main> y separación entre secciones. */
+    --main-padding: var(--space-2xl);
+    --section-gap: var(--space-2xl);
+}
+
 @page :first {
     size: A4;
     margin-top: 0;
@@ -40,7 +67,8 @@ body > img {
     margin-top: var(--space-3xl);
 }
 
-section > h2 {
+section > h2,
+article h3 {
     page-break-after: avoid;
     break-after: avoid;
 }
@@ -50,15 +78,22 @@ article {
     break-inside: avoid;
 }
 
+/* Nunca dejar una línea suelta al principio/final de página. */
+p,
+li {
+    orphans: 2;
+    widows: 2;
+}
+
 /* === HEADER === */
 header {
     position: absolute;
     left: 0;
     top: 0;
-    width: 32%;
-    /* height: 44%; */
+    width: var(--sidebar-width);
+    height: var(--sidebar-height);
     background-image:
-        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><path id='star' fill='white' opacity='0.75' d='M0 2C1 2 2 3 2 4 2 3 3 2 4 2 3 2 2 1 2 0 2 1 1 2 0 2'/></defs><use href='%23star' transform='translate(8 5) scale(0.35)'/><use href='%23star' transform='translate(25 3) scale(0.25)'/><use href='%23star' transform='translate(45 8) scale(0.3)'/><use href='%23star' transform='translate(65 4) scale(0.2)'/><use href='%23star' transform='translate(85 10) scale(0.28)'/><use href='%23star' transform='translate(15 18) scale(0.22)'/><use href='%23star' transform='translate(38 15) scale(0.32)'/><use href='%23star' transform='translate(58 20) scale(0.18)'/><use href='%23star' transform='translate(78 16) scale(0.27)'/><use href='%23star' transform='translate(92 22) scale(0.15)'/><use href='%23star' transform='translate(5 30) scale(0.33)'/><use href='%23star' transform='translate(28 28) scale(0.24)'/><use href='%23star' transform='translate(50 32) scale(0.19)'/><use href='%23star' transform='translate(72 35) scale(0.29)'/><use href='%23star' transform='translate(88 29) scale(0.21)'/><use href='%23star' transform='translate(12 42) scale(0.31)'/><use href='%23star' transform='translate(35 45) scale(0.17)'/><use href='%23star' transform='translate(55 40) scale(0.26)'/><use href='%23star' transform='translate(75 48) scale(0.35)'/><use href='%23star' transform='translate(20 55) scale(0.23)'/><use href='%23star' transform='translate(42 58) scale(0.3)'/><use href='%23star' transform='translate(62 52) scale(0.16)'/><use href='%23star' transform='translate(82 60) scale(0.28)'/><use href='%23star' transform='translate(8 68) scale(0.34)'/><use href='%23star' transform='translate(30 65) scale(0.2)'/><use href='%23star' transform='translate(52 70) scale(0.27)'/><use href='%23star' transform='translate(70 72) scale(0.15)'/><use href='%23star' transform='translate(90 68) scale(0.32)'/><use href='%23star' transform='translate(15 80) scale(0.25)'/><use href='%23star' transform='translate(38 78) scale(0.19)'/><use href='%23star' transform='translate(60 82) scale(0.31)'/><use href='%23star' transform='translate(78 85) scale(0.22)'/><use href='%23star' transform='translate(25 92) scale(0.29)'/><use href='%23star' transform='translate(48 90) scale(0.18)'/><use href='%23star' transform='translate(68 95) scale(0.24)'/><use href='%23star' transform='translate(85 92) scale(0.33)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><path id='star' fill='white' opacity='0.35' d='M0 2C1 2 2 3 2 4 2 3 3 2 4 2 3 2 2 1 2 0 2 1 1 2 0 2'/></defs><use href='%23star' transform='translate(8 5) scale(0.35)'/><use href='%23star' transform='translate(25 3) scale(0.25)'/><use href='%23star' transform='translate(45 8) scale(0.3)'/><use href='%23star' transform='translate(65 4) scale(0.2)'/><use href='%23star' transform='translate(85 10) scale(0.28)'/><use href='%23star' transform='translate(15 18) scale(0.22)'/><use href='%23star' transform='translate(38 15) scale(0.32)'/><use href='%23star' transform='translate(58 20) scale(0.18)'/><use href='%23star' transform='translate(78 16) scale(0.27)'/><use href='%23star' transform='translate(92 22) scale(0.15)'/><use href='%23star' transform='translate(5 30) scale(0.33)'/><use href='%23star' transform='translate(28 28) scale(0.24)'/><use href='%23star' transform='translate(50 32) scale(0.19)'/><use href='%23star' transform='translate(72 35) scale(0.29)'/><use href='%23star' transform='translate(88 29) scale(0.21)'/><use href='%23star' transform='translate(12 42) scale(0.31)'/><use href='%23star' transform='translate(35 45) scale(0.17)'/><use href='%23star' transform='translate(55 40) scale(0.26)'/><use href='%23star' transform='translate(75 48) scale(0.35)'/><use href='%23star' transform='translate(20 55) scale(0.23)'/><use href='%23star' transform='translate(42 58) scale(0.3)'/><use href='%23star' transform='translate(62 52) scale(0.16)'/><use href='%23star' transform='translate(82 60) scale(0.28)'/><use href='%23star' transform='translate(8 68) scale(0.34)'/><use href='%23star' transform='translate(30 65) scale(0.2)'/><use href='%23star' transform='translate(52 70) scale(0.27)'/><use href='%23star' transform='translate(70 72) scale(0.15)'/><use href='%23star' transform='translate(90 68) scale(0.32)'/><use href='%23star' transform='translate(15 80) scale(0.25)'/><use href='%23star' transform='translate(38 78) scale(0.19)'/><use href='%23star' transform='translate(60 82) scale(0.31)'/><use href='%23star' transform='translate(78 85) scale(0.22)'/><use href='%23star' transform='translate(25 92) scale(0.29)'/><use href='%23star' transform='translate(48 90) scale(0.18)'/><use href='%23star' transform='translate(68 95) scale(0.24)'/><use href='%23star' transform='translate(85 92) scale(0.33)'/></svg>"),
         linear-gradient(180deg, var(--color-primary-dark), var(--color-gray-800));
     background-size: cover, cover;
     background-repeat: no-repeat;
@@ -133,13 +168,12 @@ header p {
 
 /* === Main === */
 main {
-    padding: var(--space-2xl);
+    padding: var(--main-padding);
     background-color: var(--color-bg-light);
-    overflow-y: auto;
 }
 
 main section {
-    margin-bottom: var(--space-2xl);
+    margin-bottom: var(--section-gap);
 }
 
 main section h2 {
@@ -153,15 +187,16 @@ main section h2 {
     margin-bottom: var(--space-lg);
 }
 
-/* === Section Especificas === */
-main section:first-child h2,
-main section:first-child > article:nth-of-type(-n+3) {
-    margin-left: calc(32% + var(--space-xl));
-}
-
-/* Temporary */
-main section:nth-child(2){
-    margin-top: 8rem;
+/* === Section Específicas ===
+   La primera sección ocupa la columna de la derecha, al lado de la cabecera,
+   y reserva su altura: así la sección siguiente empieza justo por debajo de
+   la barra lateral sin tener que empujarla con un margen a ojo. */
+main section:first-child {
+    margin-left: calc(var(--sidebar-width) + var(--sidebar-gap));
+    min-height: calc(
+        var(--sidebar-height) + var(--sidebar-clearance)
+        - var(--main-padding) - var(--section-gap)
+    );
 }
 
 main section:last-child {
@@ -188,7 +223,7 @@ main section article h3 {
     line-height: var(--line-height-tight);
 }
 
-main section article div {
+main section article > div {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -196,22 +231,22 @@ main section article div {
     justify-content: space-between;
 }
 
-main section article div h4 {
+main section article > div h4 {
     font-size: var(--font-size-xs);
     font-weight: var(--font-weight-semibold);
     color: var(--color-gray-600);
     line-height: var(--line-height-normal);
 }
 
-main section article div time {
+main section article > div time {
     font-size: var(--font-size-xs);
     font-weight: var(--font-weight-medium);
     color: var(--color-primary-dark);
     font-style: italic;
 }
 
-main section article div a img,
-main section article div a svg {
+main section article > div a img,
+main section article > div a svg {
     width: 15px;
     height: auto;
     vertical-align: middle;
@@ -250,13 +285,20 @@ main section article ul li:last-child {
 /* === FOOTER === */
 /******************/
 footer {
+    /* Anclada al pie de la última página: alto total de las páginas menos el
+       margen superior que se repite a partir de la segunda y el propio pie. */
     position: absolute;
-    left: -0.25%;
-    top: 2113px;
-    width: 100.5%;
+    left: 0;
+    top: calc(
+        var(--total-pages) * var(--page-height)
+        - (var(--total-pages) - 1) * var(--page-margin-top)
+        - var(--footer-height)
+    );
+    width: 100%;
+    min-height: var(--footer-height);
     padding: var(--space-lg) var(--space-xl);
     background-image:
-        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'><defs><path id='star' fill='white' opacity='0.75' d='M0 2C1 2 2 3 2 4 2 3 3 2 4 2 3 2 2 1 2 0 2 1 1 2 0 2'/></defs><use href='%23star' transform='translate(5 3) scale(0.32)'/><use href='%23star' transform='translate(18 2) scale(0.22)'/><use href='%23star' transform='translate(32 5) scale(0.28)'/><use href='%23star' transform='translate(48 3) scale(0.18)'/><use href='%23star' transform='translate(62 6) scale(0.25)'/><use href='%23star' transform='translate(78 4) scale(0.35)'/><use href='%23star' transform='translate(92 5) scale(0.15)'/><use href='%23star' transform='translate(10 12) scale(0.3)'/><use href='%23star' transform='translate(25 10) scale(0.2)'/><use href='%23star' transform='translate(40 14) scale(0.27)'/><use href='%23star' transform='translate(55 11) scale(0.33)'/><use href='%23star' transform='translate(70 13) scale(0.19)'/><use href='%23star' transform='translate(85 15) scale(0.26)'/><use href='%23star' transform='translate(8 20) scale(0.31)'/><use href='%23star' transform='translate(22 22) scale(0.17)'/><use href='%23star' transform='translate(38 19) scale(0.24)'/><use href='%23star' transform='translate(52 23) scale(0.29)'/><use href='%23star' transform='translate(68 21) scale(0.16)'/><use href='%23star' transform='translate(82 24) scale(0.34)'/><use href='%23star' transform='translate(95 22) scale(0.21)'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'><defs><path id='star' fill='white' opacity='0.35' d='M0 2C1 2 2 3 2 4 2 3 3 2 4 2 3 2 2 1 2 0 2 1 1 2 0 2'/></defs><use href='%23star' transform='translate(5 3) scale(0.32)'/><use href='%23star' transform='translate(18 2) scale(0.22)'/><use href='%23star' transform='translate(32 5) scale(0.28)'/><use href='%23star' transform='translate(48 3) scale(0.18)'/><use href='%23star' transform='translate(62 6) scale(0.25)'/><use href='%23star' transform='translate(78 4) scale(0.35)'/><use href='%23star' transform='translate(92 5) scale(0.15)'/><use href='%23star' transform='translate(10 12) scale(0.3)'/><use href='%23star' transform='translate(25 10) scale(0.2)'/><use href='%23star' transform='translate(40 14) scale(0.27)'/><use href='%23star' transform='translate(55 11) scale(0.33)'/><use href='%23star' transform='translate(70 13) scale(0.19)'/><use href='%23star' transform='translate(85 15) scale(0.26)'/><use href='%23star' transform='translate(8 20) scale(0.31)'/><use href='%23star' transform='translate(22 22) scale(0.17)'/><use href='%23star' transform='translate(38 19) scale(0.24)'/><use href='%23star' transform='translate(52 23) scale(0.29)'/><use href='%23star' transform='translate(68 21) scale(0.16)'/><use href='%23star' transform='translate(82 24) scale(0.34)'/><use href='%23star' transform='translate(95 22) scale(0.21)'/></svg>"),
         linear-gradient(180deg, var(--color-gray-800), var(--color-primary-dark));
     background-size: cover, cover;
     background-repeat: no-repeat;
