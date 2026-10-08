@@ -334,6 +334,26 @@
     color: var(--color-primary);
 }
 
+/* A talk given several times lists each occurrence under one title */
+.talk-occurrences {
+    margin-top: var(--space-sm);
+}
+
+.talk-occurrences .talk-resource-row {
+    margin-bottom: 0;
+}
+
+.talk-occurrences .talk-resource-row h4 {
+    margin: 0;
+}
+
+.talk-meta {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
 .resource-links a,
 .resource-link {
     display: inline-block;
@@ -583,6 +603,10 @@
         flex-direction: column;
         align-items: flex-start;
         gap: var(--space-md);
+    }
+
+    .talk-occurrences .talk-resource-row + .talk-resource-row {
+        margin-top: var(--space-lg);
     }
 
     /* Icon-only links become labelled pills: easier to read and to tap */

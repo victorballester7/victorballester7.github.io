@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 import cv from '../content/cv.json';
 import { appIcons } from '../data/app-icons';
+import { talks } from '../data/talks';
 import '../styles/cv.css';
 
 const contactLinks = [
@@ -129,22 +130,28 @@ const updatedDate = new Date().toLocaleDateString('en-EN', {
         <section class="cv-section">
             <h2>Talks</h2>
             <div class="cv-grid">
-                {cv.talks.map(item => (
+                {talks.map(talk => (
                     <article class="cv-card">
                         <div class="card-heading">
-                            <h3>{item.title}</h3>
-                            <time>{item.period}</time>
+                            <h3>{talk.title}</h3>
                         </div>
-                        <div class="resource-row talk-resource-row">
-                            <h4>{item.event}<span class="talk-location">{item.location}</span></h4>
-                            {item.slides && <div class="resource-links">
-                                <a class="slides-link" href={item.slides} target="_blank" rel="noopener noreferrer" aria-label={`Open slides for ${item.title}`} title="Open slides">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox={appIcons.pdf.viewBox} aria-hidden="true">
-                                        {appIcons.pdf.paths.map((path, index) => <path class={`pdf-path-${index + 1}`} d={path} />)}
-                                    </svg>
-                                    <span class="resource-label">Slides</span>
-                                </a>
-                            </div>}
+                        <div class="talk-occurrences">
+                            {talk.occurrences.map(item => (
+                                <div class="resource-row talk-resource-row">
+                                    <h4>{item.event}<span class="talk-location">{item.location}</span></h4>
+                                    <div class="talk-meta">
+                                        <time>{item.period}</time>
+                                        {item.slides && <div class="resource-links">
+                                            <a class="slides-link" href={item.slides} target="_blank" rel="noopener noreferrer" aria-label={`Open slides for ${talk.title} at ${item.event}`} title="Open slides">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox={appIcons.pdf.viewBox} aria-hidden="true">
+                                                    {appIcons.pdf.paths.map((path, index) => <path class={`pdf-path-${index + 1}`} d={path} />)}
+                                                </svg>
+                                                <span class="resource-label">Slides</span>
+                                            </a>
+                                        </div>}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </article>
                 ))}

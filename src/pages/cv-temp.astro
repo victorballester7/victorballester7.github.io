@@ -1,5 +1,6 @@
 ---
 import cv from '../content/cv.json';
+import { talks } from '../data/talks';
 
 const buildDate = new Date().toLocaleDateString('en-EN', {
     year: 'numeric',
@@ -128,22 +129,22 @@ const buildDate = new Date().toLocaleDateString('en-EN', {
 
         <section>
             <h2>Talks</h2>
-            {cv.talks.map(talks => (
+            {talks.map(talk => (
                 <article>
+                    <h3>{talk.title}</h3>
+                    {talk.occurrences.map(item => (
                     <div>
-                        <h3>{talks.title}</h3>
-                        {(talks.slides) && (
-                        <div>
-                            <a href={talks.slides} target="_blank">
+                        <h4>{item.event} | {item.location}</h4>
+                        <span>
+                            <time>{item.period}</time>
+                            {item.slides && (
+                            <a href={new URL(item.slides, Astro.site).href} target="_blank">
                                 <img src="/images/logos/others/pdf.svg" alt="PDF Icon">
                             </a>
-                        </div>
                             )}
+                        </span>
                     </div>
-                    <div>
-                        <h4>{talks.event} | {talks.location}</h4>
-                        <time>{talks.period}</time>
-                    </div>
+                    ))}
                 </article>
             ))}
         </section>
